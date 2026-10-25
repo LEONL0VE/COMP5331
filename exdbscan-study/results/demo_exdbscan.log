@@ -1,0 +1,306 @@
+{
+  "immutable_features": [],
+  "result": {
+    "original": [
+      0.0,
+      0.0
+    ],
+    "source_cluster": -1,
+    "target_cluster": 0,
+    "requested_k": 3,
+    "returned_k": 3,
+    "counterfactuals": [
+      [
+        1.920739580492897,
+        0.3973943959640477
+      ],
+      [
+        2.0136060761678563,
+        0.3356010126946427
+      ],
+      [
+        2.026158790258207,
+        0.47277038439358154
+      ]
+    ],
+    "changes": [
+      [
+        1.920739580492897,
+        0.3973943959640477
+      ],
+      [
+        2.0136060761678563,
+        0.3356010126946427
+      ],
+      [
+        2.026158790258207,
+        0.47277038439358154
+      ]
+    ],
+    "reference_indices": [
+      3,
+      4,
+      2
+    ],
+    "target_labels": [
+      0,
+      0,
+      0
+    ],
+    "reachable_clusters": [
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "unique_target_labels": [
+      true,
+      true,
+      true
+    ],
+    "immutable_features": [],
+    "candidate_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selection_steps": [
+      {
+        "reference_index": 3,
+        "marginal_energy": 8.77,
+        "cumulative_energy": 8.77
+      },
+      {
+        "reference_index": 4,
+        "marginal_energy": 9.576088798050924,
+        "cumulative_energy": 18.34608879805092
+      },
+      {
+        "reference_index": 2,
+        "marginal_energy": 10.046668398421707,
+        "cumulative_energy": 28.39275719647263
+      }
+    ],
+    "graph_distances": [
+      [
+        0.0,
+        0.14142135623730956,
+        0.14142135623730956
+      ],
+      [
+        0.14142135623730956,
+        0.0,
+        0.19999999999999996
+      ],
+      [
+        0.14142135623730956,
+        0.19999999999999996,
+        0.0
+      ]
+    ],
+    "normalization_scale": 21.684485496374418,
+    "status": "ok",
+    "reason": ""
+  },
+  "metrics": {
+    "status": "ok",
+    "requested_k": 3,
+    "returned_k": 3,
+    "valid_count": 3,
+    "returned_validity": 1.0,
+    "requested_validity": 1.0,
+    "complete": true,
+    "unique_target_rate": 1.0,
+    "immutable_preserved": true,
+    "mean_proximity": 2.027794734763717,
+    "dpp_euclidean": 0.03442633568173969,
+    "dpp_reference_graph": 0.049704768548273576,
+    "mean_finite_reference_graph_distance": 0.16094757082487302,
+    "disconnected_reference_pairs": 0
+  }
+}
+{
+  "immutable_features": [
+    1
+  ],
+  "result": {
+    "original": [
+      0.0,
+      0.0
+    ],
+    "source_cluster": -1,
+    "target_cluster": 0,
+    "requested_k": 3,
+    "returned_k": 3,
+    "counterfactuals": [
+      [
+        2.1,
+        0.0
+      ],
+      [
+        2.1339745962155616,
+        0.0
+      ],
+      [
+        2.285857157145715,
+        0.0
+      ]
+    ],
+    "changes": [
+      [
+        2.1,
+        0.0
+      ],
+      [
+        2.1339745962155616,
+        0.0
+      ],
+      [
+        2.285857157145715,
+        0.0
+      ]
+    ],
+    "reference_indices": [
+      3,
+      4,
+      2
+    ],
+    "target_labels": [
+      0,
+      0,
+      0
+    ],
+    "reachable_clusters": [
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "unique_target_labels": [
+      true,
+      true,
+      true
+    ],
+    "immutable_features": [
+      1
+    ],
+    "candidate_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selection_steps": [
+      {
+        "reference_index": 3,
+        "marginal_energy": 8.77,
+        "cumulative_energy": 8.77
+      },
+      {
+        "reference_index": 4,
+        "marginal_energy": 9.576088798050924,
+        "cumulative_energy": 18.34608879805092
+      },
+      {
+        "reference_index": 2,
+        "marginal_energy": 10.046668398421707,
+        "cumulative_energy": 28.39275719647263
+      }
+    ],
+    "graph_distances": [
+      [
+        0.0,
+        0.14142135623730956,
+        0.14142135623730956
+      ],
+      [
+        0.14142135623730956,
+        0.0,
+        0.19999999999999996
+      ],
+      [
+        0.14142135623730956,
+        0.19999999999999996,
+        0.0
+      ]
+    ],
+    "normalization_scale": 21.684485496374418,
+    "status": "ok",
+    "reason": ""
+  },
+  "metrics": {
+    "status": "ok",
+    "requested_k": 3,
+    "returned_k": 3,
+    "valid_count": 3,
+    "returned_validity": 1.0,
+    "requested_validity": 1.0,
+    "complete": true,
+    "unique_target_rate": 1.0,
+    "immutable_preserved": true,
+    "mean_proximity": 2.173277251120426,
+    "dpp_euclidean": 0.01590837835682087,
+    "dpp_reference_graph": 0.049704768548273576,
+    "mean_finite_reference_graph_distance": 0.16094757082487302,
+    "disconnected_reference_pairs": 0
+  }
+}
+{
+  "immutable_features": [
+    0
+  ],
+  "result": {
+    "original": [
+      0.0,
+      0.0
+    ],
+    "source_cluster": -1,
+    "target_cluster": 0,
+    "requested_k": 3,
+    "returned_k": 0,
+    "counterfactuals": [],
+    "changes": [],
+    "reference_indices": [],
+    "target_labels": [],
+    "reachable_clusters": [],
+    "unique_target_labels": [],
+    "immutable_features": [
+      0
+    ],
+    "candidate_indices": [],
+    "selection_steps": [],
+    "graph_distances": [],
+    "normalization_scale": 1.0,
+    "status": "infeasible",
+    "reason": "No target core ball intersects the immutable-coordinate slice"
+  },
+  "metrics": {
+    "status": "infeasible",
+    "requested_k": 3,
+    "returned_k": 0,
+    "valid_count": 0,
+    "returned_validity": 0.0,
+    "requested_validity": 0.0,
+    "complete": false,
+    "unique_target_rate": 0.0,
+    "immutable_preserved": true,
+    "mean_proximity": null,
+    "dpp_euclidean": null,
+    "dpp_reference_graph": null,
+    "mean_finite_reference_graph_distance": null,
+    "disconnected_reference_pairs": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "created_at": "2026-10-25T20:36:06.935750+00:00",
+  "source_fingerprint": "a5f287279c096457100a80c50c3f53bec59da51f2d4abf07178977c9e74df769",
+  "queries": 1944,
+  "returned_counterfactuals": 3234,
+  "valid_counterfactuals": 3234
+}

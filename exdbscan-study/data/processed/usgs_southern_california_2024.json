@@ -1,0 +1,23 @@
+{
+  "source": "USGS FDSN Earthquake Catalog",
+  "source_url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2024-01-01&endtime=2024-12-31T23%3A59%3A59.999&minlatitude=32&maxlatitude=35.5&minlongitude=-120&maxlongitude=-115&minmagnitude=2&eventtype=earthquake&orderby=time-asc&limit=20000",
+  "documentation": "https://earthquake.usgs.gov/fdsnws/event/1/",
+  "retrieved_at": "2026-10-25T20:23:14.227418+00:00",
+  "raw_sha256": "62b2b45b84da2d44355b4b54dbc58f4a9aa33ffedd71523672c8dc7e2539553e",
+  "raw_records": 1260,
+  "processed_records": 1260,
+  "max_points": 2000,
+  "origin_lat_lon": [
+    34.0,
+    -118.0
+  ],
+  "earth_radius_m": 6371008.8,
+  "features": [
+    "east_m",
+    "north_m"
+  ],
+  "projection": "Local equirectangular approximation. Euclidean distances in this plane, not geodesic distances.",
+  "cleaning": "Discard invalid coordinates and repeated event IDs; preserve distinct co-located events; sort by time and ID.",
+  "sampling": "If over max_points, deterministic equally spaced indices in time order.",
+  "processed_sha256": "42fe0d0d4802261da6fb7167642bf063262b1f9b89c4574c90f12c87352f2139"
+}

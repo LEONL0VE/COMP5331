@@ -1,0 +1,234 @@
+{
+  "usgs_southern_california_2024_unconstrained": {
+    "eps": 2000,
+    "min_pts": 5,
+    "seed": 7,
+    "point_index": 0,
+    "explanation": {
+      "original": [
+        -34139.13800381037,
+        -46720.46991795926
+      ],
+      "source_cluster": -1,
+      "target_cluster": 0,
+      "requested_k": 3,
+      "returned_k": 3,
+      "counterfactuals": [
+        [
+          173457.5394982975,
+          -82886.26382586545
+        ],
+        [
+          173534.74940079075,
+          -83143.47143415187
+        ],
+        [
+          174608.83836986916,
+          -82447.34621426387
+        ]
+      ],
+      "changes": [
+        [
+          207596.67750210786,
+          -36165.79390790619
+        ],
+        [
+          207673.88740460112,
+          -36423.00151619261
+        ],
+        [
+          208747.97637367953,
+          -35726.87629630462
+        ]
+      ],
+      "reference_indices": [
+        8,
+        947,
+        551
+      ],
+      "target_labels": [
+        0,
+        0,
+        0
+      ],
+      "reachable_clusters": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "unique_target_labels": [
+        true,
+        true,
+        true
+      ],
+      "immutable_features": [],
+      "candidate_indices": [
+        8,
+        532,
+        533,
+        551,
+        947
+      ],
+      "selection_steps": [
+        {
+          "reference_index": 8,
+          "marginal_energy": 45251238700.545715,
+          "cumulative_energy": 45251238700.545715
+        },
+        {
+          "reference_index": 947,
+          "marginal_energy": 45302453469.84085,
+          "cumulative_energy": 90553692170.38657
+        },
+        {
+          "reference_index": 551,
+          "marginal_energy": 45703260163.31252,
+          "cumulative_energy": 136256952333.6991
+        }
+      ],
+      "graph_distances": [
+        [
+          0.0,
+          270.58460098531503,
+          1235.1723496697898
+        ],
+        [
+          270.58460098531503,
+          0.0,
+          1285.546125389292
+        ],
+        [
+          1235.1723496697898,
+          1285.546125389292,
+          0.0
+        ]
+      ],
+      "normalization_scale": 232.352167493192,
+      "status": "ok",
+      "reason": ""
+    }
+  },
+  "usgs_southern_california_2024_immutable": {
+    "eps": 2000,
+    "min_pts": 5,
+    "seed": 7,
+    "point_index": 163,
+    "explanation": {
+      "original": [
+        144423.01212792934,
+        -81895.17659199712
+      ],
+      "source_cluster": 10,
+      "target_cluster": 0,
+      "requested_k": 3,
+      "returned_k": 3,
+      "counterfactuals": [
+        [
+          173938.05343179984,
+          -81895.17659199712
+        ],
+        [
+          174296.44878149117,
+          -81895.17659199712
+        ],
+        [
+          174788.895401525,
+          -81895.17659199712
+        ]
+      ],
+      "changes": [
+        [
+          29515.0413038705,
+          0.0
+        ],
+        [
+          29873.436653561832,
+          0.0
+        ],
+        [
+          30365.883273595653,
+          0.0
+        ]
+      ],
+      "reference_indices": [
+        8,
+        947,
+        551
+      ],
+      "target_labels": [
+        0,
+        0,
+        0
+      ],
+      "reachable_clusters": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "unique_target_labels": [
+        true,
+        true,
+        true
+      ],
+      "immutable_features": [
+        1
+      ],
+      "candidate_indices": [
+        8,
+        532,
+        533,
+        551,
+        947
+      ],
+      "selection_steps": [
+        {
+          "reference_index": 8,
+          "marginal_energy": 963081277.6490381,
+          "cumulative_energy": 963081277.6490381
+        },
+        {
+          "reference_index": 947,
+          "marginal_energy": 968610328.4562731,
+          "cumulative_energy": 1931691606.1053112
+        },
+        {
+          "reference_index": 551,
+          "marginal_energy": 1034874428.9131992,
+          "cumulative_energy": 2966566035.0185103
+        }
+      ],
+      "graph_distances": [
+        [
+          0.0,
+          270.58460098531503,
+          1235.1723496697898
+        ],
+        [
+          270.58460098531503,
+          0.0,
+          1285.546125389292
+        ],
+        [
+          1235.1723496697898,
+          1285.546125389292,
+          0.0
+        ]
+      ],
+      "normalization_scale": 33.897132599830584,
+      "status": "ok",
+      "reason": ""
+    }
+  }
+}

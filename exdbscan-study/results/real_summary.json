@@ -1,0 +1,272 @@
+{
+  "created_at": "2026-10-25T20:36:06.933309+00:00",
+  "source_fingerprint": "a5f287279c096457100a80c50c3f53bec59da51f2d4abf07178977c9e74df769",
+  "config": {
+    "dataset": "usgs_southern_california_2024",
+    "query": {
+      "format": "csv",
+      "starttime": "2024-01-01",
+      "endtime": "2024-12-31T23:59:59.999",
+      "minlatitude": 32,
+      "maxlatitude": 35.5,
+      "minlongitude": -120,
+      "maxlongitude": -115,
+      "minmagnitude": 2,
+      "eventtype": "earthquake",
+      "orderby": "time-asc",
+      "limit": 20000
+    },
+    "origin_lat_lon": [
+      34.0,
+      -118.0
+    ],
+    "max_points": 2000,
+    "eps": [
+      2000,
+      5000,
+      10000
+    ],
+    "min_pts": [
+      5,
+      10,
+      20
+    ],
+    "k": [
+      1,
+      3,
+      5
+    ],
+    "strategies": [
+      "greedy",
+      "nearest",
+      "random"
+    ],
+    "max_queries_per_fit": 12,
+    "immutable_features": [
+      1
+    ],
+    "seed": 7
+  },
+  "fits": [
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 2000,
+      "min_pts": 5,
+      "clusters": 30,
+      "core_points": 741,
+      "noise_points": 490,
+      "queries": 12,
+      "fit_seconds": 0.020301542012020946
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 2000,
+      "min_pts": 10,
+      "clusters": 16,
+      "core_points": 625,
+      "noise_points": 591,
+      "queries": 12,
+      "fit_seconds": 0.019984292011940852
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 2000,
+      "min_pts": 20,
+      "clusters": 5,
+      "core_points": 467,
+      "noise_points": 757,
+      "queries": 12,
+      "fit_seconds": 0.019679709017509595
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 5000,
+      "min_pts": 5,
+      "clusters": 37,
+      "core_points": 902,
+      "noise_points": 313,
+      "queries": 12,
+      "fit_seconds": 0.02554004199919291
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 5000,
+      "min_pts": 10,
+      "clusters": 20,
+      "core_points": 752,
+      "noise_points": 449,
+      "queries": 12,
+      "fit_seconds": 0.02494745800504461
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 5000,
+      "min_pts": 20,
+      "clusters": 9,
+      "core_points": 602,
+      "noise_points": 616,
+      "queries": 12,
+      "fit_seconds": 0.024929791979957372
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 10000,
+      "min_pts": 5,
+      "clusters": 29,
+      "core_points": 1074,
+      "noise_points": 132,
+      "queries": 12,
+      "fit_seconds": 0.027373542019631714
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 10000,
+      "min_pts": 10,
+      "clusters": 19,
+      "core_points": 917,
+      "noise_points": 247,
+      "queries": 12,
+      "fit_seconds": 0.027442167018307373
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "seed": 7,
+      "n": 1260,
+      "eps": 10000,
+      "min_pts": 20,
+      "clusters": 10,
+      "core_points": 716,
+      "noise_points": 455,
+      "queries": 12,
+      "fit_seconds": 0.027213041990762576
+    }
+  ],
+  "summaries": [
+    {
+      "dataset": "usgs_southern_california_2024",
+      "strategy": "greedy",
+      "constraint": "immutable",
+      "queries": 324,
+      "requested": 972,
+      "returned": 106,
+      "valid": 106,
+      "returned_validity": 1.0,
+      "requested_validity": 0.10905349794238683,
+      "complete_queries": 33,
+      "status_counts": {
+        "infeasible": 285,
+        "ok": 33,
+        "partial": 6
+      },
+      "mean_query_proximity": 73109.82336255291,
+      "total_query_seconds": 0.019628212874522433
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "strategy": "greedy",
+      "constraint": "unconstrained",
+      "queries": 324,
+      "requested": 972,
+      "returned": 972,
+      "valid": 972,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 324,
+      "status_counts": {
+        "ok": 324
+      },
+      "mean_query_proximity": 135423.85653001536,
+      "total_query_seconds": 0.130183248227695
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "strategy": "nearest",
+      "constraint": "immutable",
+      "queries": 324,
+      "requested": 972,
+      "returned": 106,
+      "valid": 106,
+      "returned_validity": 1.0,
+      "requested_validity": 0.10905349794238683,
+      "complete_queries": 33,
+      "status_counts": {
+        "infeasible": 285,
+        "ok": 33,
+        "partial": 6
+      },
+      "mean_query_proximity": 73109.82336255291,
+      "total_query_seconds": 0.016010950261261314
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "strategy": "nearest",
+      "constraint": "unconstrained",
+      "queries": 324,
+      "requested": 972,
+      "returned": 972,
+      "valid": 972,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 324,
+      "status_counts": {
+        "ok": 324
+      },
+      "mean_query_proximity": 135423.85653001536,
+      "total_query_seconds": 0.05622036964632571
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "strategy": "random",
+      "constraint": "immutable",
+      "queries": 324,
+      "requested": 972,
+      "returned": 106,
+      "valid": 106,
+      "returned_validity": 1.0,
+      "requested_validity": 0.10905349794238683,
+      "complete_queries": 33,
+      "status_counts": {
+        "infeasible": 285,
+        "ok": 33,
+        "partial": 6
+      },
+      "mean_query_proximity": 76239.81018155359,
+      "total_query_seconds": 0.01742837589699775
+    },
+    {
+      "dataset": "usgs_southern_california_2024",
+      "strategy": "random",
+      "constraint": "unconstrained",
+      "queries": 324,
+      "requested": 972,
+      "returned": 972,
+      "valid": 972,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 324,
+      "status_counts": {
+        "ok": 324
+      },
+      "mean_query_proximity": 139917.49540398055,
+      "total_query_seconds": 0.09497775812633336
+    }
+  ],
+  "all_returned_points_valid": true,
+  "note": "Timing includes cache misses and is not a controlled performance benchmark. DPP reference-graph uses reference cores; Euclidean DPP uses endpoints."
+}

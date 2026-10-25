@@ -1,0 +1,734 @@
+{
+  "blobs_unconstrained": {
+    "eps": 0.25,
+    "min_pts": 4,
+    "seed": 7,
+    "point_index": 120,
+    "explanation": {
+      "original": [
+        0.0,
+        0.0
+      ],
+      "source_cluster": -1,
+      "target_cluster": 0,
+      "requested_k": 3,
+      "returned_k": 3,
+      "counterfactuals": [
+        [
+          -1.5776230057286507,
+          -0.06999804480692687
+        ],
+        [
+          -1.599408018868441,
+          0.07155503245877862
+        ],
+        [
+          -1.6742830107727071,
+          -0.20823494980181884
+        ]
+      ],
+      "changes": [
+        [
+          -1.5776230057286507,
+          -0.06999804480692687
+        ],
+        [
+          -1.599408018868441,
+          0.07155503245877862
+        ],
+        [
+          -1.6742830107727071,
+          -0.20823494980181884
+        ]
+      ],
+      "reference_indices": [
+        29,
+        37,
+        35
+      ],
+      "target_labels": [
+        0,
+        0,
+        0
+      ],
+      "reachable_clusters": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "unique_target_labels": [
+        true,
+        true,
+        true
+      ],
+      "immutable_features": [],
+      "candidate_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "selection_steps": [
+        {
+          "reference_index": 29,
+          "marginal_energy": 3.3458816368326514,
+          "cumulative_energy": 3.3458816368326514
+        },
+        {
+          "reference_index": 37,
+          "marginal_energy": 3.9084543311887696,
+          "cumulative_energy": 7.2543359680214206
+        },
+        {
+          "reference_index": 35,
+          "marginal_energy": 4.426032566631811,
+          "cumulative_energy": 11.680368534653232
+        }
+      ],
+      "graph_distances": [
+        [
+          0.0,
+          0.16524965602521804,
+          0.1843674669355529
+        ],
+        [
+          0.16524965602521804,
+          0.0,
+          0.3304674939864202
+        ],
+        [
+          0.1843674669355529,
+          0.3304674939864202,
+          0.0
+        ]
+      ],
+      "normalization_scale": 12.54903610384144,
+      "status": "ok",
+      "reason": ""
+    }
+  },
+  "blobs_immutable": {
+    "eps": 0.25,
+    "min_pts": 4,
+    "seed": 7,
+    "point_index": 120,
+    "explanation": {
+      "original": [
+        0.0,
+        0.0
+      ],
+      "source_cluster": -1,
+      "target_cluster": 0,
+      "requested_k": 3,
+      "returned_k": 3,
+      "counterfactuals": [
+        [
+          -1.5908902501916264,
+          0.0
+        ],
+        [
+          -1.613242962499265,
+          0.0
+        ],
+        [
+          -1.8493250766278673,
+          0.0
+        ]
+      ],
+      "changes": [
+        [
+          -1.5908902501916264,
+          0.0
+        ],
+        [
+          -1.613242962499265,
+          0.0
+        ],
+        [
+          -1.8493250766278673,
+          0.0
+        ]
+      ],
+      "reference_indices": [
+        29,
+        37,
+        35
+      ],
+      "target_labels": [
+        0,
+        0,
+        0
+      ],
+      "reachable_clusters": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "unique_target_labels": [
+        true,
+        true,
+        true
+      ],
+      "immutable_features": [
+        1
+      ],
+      "candidate_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "selection_steps": [
+        {
+          "reference_index": 29,
+          "marginal_energy": 3.3458816368326514,
+          "cumulative_energy": 3.3458816368326514
+        },
+        {
+          "reference_index": 37,
+          "marginal_energy": 3.9084543311887696,
+          "cumulative_energy": 7.2543359680214206
+        },
+        {
+          "reference_index": 35,
+          "marginal_energy": 4.426032566631811,
+          "cumulative_energy": 11.680368534653232
+        }
+      ],
+      "graph_distances": [
+        [
+          0.0,
+          0.16524965602521804,
+          0.1843674669355529
+        ],
+        [
+          0.16524965602521804,
+          0.0,
+          0.3304674939864202
+        ],
+        [
+          0.1843674669355529,
+          0.3304674939864202,
+          0.0
+        ]
+      ],
+      "normalization_scale": 12.54903610384144,
+      "status": "ok",
+      "reason": ""
+    }
+  },
+  "moons_unconstrained": {
+    "eps": 0.16,
+    "min_pts": 3,
+    "seed": 7,
+    "point_index": 0,
+    "explanation": {
+      "original": [
+        1.0000184523003623,
+        0.004481183062627048
+      ],
+      "source_cluster": 0,
+      "target_cluster": 1,
+      "requested_k": 3,
+      "returned_k": 3,
+      "counterfactuals": [
+        [
+          0.15169732369012884,
+          -0.30416118312880125
+        ],
+        [
+          1.8500417391423545,
+          -0.31539556668743834
+        ],
+        [
+          0.21455662385258628,
+          -0.5954192585711718
+        ]
+      ],
+      "changes": [
+        [
+          -0.8483211286102335,
+          -0.3086423661914283
+        ],
+        [
+          0.8500232868419921,
+          -0.3198767497500654
+        ],
+        [
+          -0.7854618284477761,
+          -0.5999004416337989
+        ]
+      ],
+      "reference_indices": [
+        60,
+        119,
+        67
+      ],
+      "target_labels": [
+        1,
+        1,
+        1
+      ],
+      "reachable_clusters": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "unique_target_labels": [
+        true,
+        true,
+        true
+      ],
+      "immutable_features": [],
+      "candidate_indices": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "selection_steps": [
+        {
+          "reference_index": 60,
+          "marginal_energy": 1.129380213255152,
+          "cumulative_energy": 1.129380213255152
+        },
+        {
+          "reference_index": 119,
+          "marginal_energy": 1.170398561218,
+          "cumulative_energy": 2.299778774473152
+        },
+        {
+          "reference_index": 67,
+          "marginal_energy": 1.6055319189609514,
+          "cumulative_energy": 3.9053106934341035
+        }
+      ],
+      "graph_distances": [
+        [
+          0.0,
+          3.108894651426011,
+          0.35901619660850903
+        ],
+        [
+          3.108894651426011,
+          0.0,
+          2.7578698934851054
+        ],
+        [
+          0.35901619660850903,
+          2.757869893485105,
+          0.0
+        ]
+      ],
+      "normalization_scale": 10.975105701988817,
+      "status": "ok",
+      "reason": ""
+    }
+  },
+  "rings_unconstrained": {
+    "eps": 0.22,
+    "min_pts": 3,
+    "seed": 7,
+    "point_index": 0,
+    "explanation": {
+      "original": [
+        1.000012301533575,
+        0.002987455375084699
+      ],
+      "source_cluster": 0,
+      "target_cluster": 1,
+      "requested_k": 3,
+      "returned_k": 3,
+      "counterfactuals": [
+        [
+          1.8738834912442142,
+          0.14501642163298079
+        ],
+        [
+          1.8263710458432816,
+          -0.4459398667955893
+        ],
+        [
+          1.8000318595667997,
+          0.6056486423217594
+        ]
+      ],
+      "changes": [
+        [
+          0.8738711897106393,
+          0.1420289662578961
+        ],
+        [
+          0.8263587443097067,
+          -0.448927322170674
+        ],
+        [
+          0.8000195580332248,
+          0.6026611869466747
+        ]
+      ],
+      "reference_indices": [
+        71,
+        137,
+        74
+      ],
+      "target_labels": [
+        1,
+        1,
+        1
+      ],
+      "reachable_clusters": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "unique_target_labels": [
+        true,
+        true,
+        true
+      ],
+      "immutable_features": [],
+      "candidate_indices": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        137,
+        138,
+        139
+      ],
+      "selection_steps": [
+        {
+          "reference_index": 71,
+          "marginal_energy": 1.221771731205516,
+          "cumulative_energy": 1.221771731205516
+        },
+        {
+          "reference_index": 137,
+          "marginal_energy": 1.5759036715064259,
+          "cumulative_energy": 2.797675402711942
+        },
+        {
+          "reference_index": 74,
+          "marginal_energy": 1.9197803213809927,
+          "cumulative_energy": 4.717455724092934
+        }
+      ],
+      "graph_distances": [
+        [
+          0.0,
+          0.7427056098010354,
+          0.5717581400902482
+        ],
+        [
+          0.7427056098010355,
+          0.0,
+          1.3144637498912837
+        ],
+        [
+          0.5717581400902482,
+          1.3144637498912837,
+          0.0
+        ]
+      ],
+      "normalization_scale": 5.871628642549367,
+      "status": "ok",
+      "reason": ""
+    }
+  },
+  "rings_immutable": {
+    "eps": 0.22,
+    "min_pts": 3,
+    "seed": 7,
+    "point_index": 0,
+    "explanation": {
+      "original": [
+        1.000012301533575,
+        0.002987455375084699
+      ],
+      "source_cluster": 0,
+      "target_cluster": 1,
+      "requested_k": 3,
+      "returned_k": 3,
+      "counterfactuals": [
+        [
+          1.9608155951328794,
+          0.002987455375084699
+        ],
+        [
+          1.9863648423076359,
+          0.002987455375084699
+        ],
+        [
+          1.8911469160056429,
+          0.002987455375084699
+        ]
+      ],
+      "changes": [
+        [
+          0.9608032935993045,
+          0.0
+        ],
+        [
+          0.986352540774061,
+          0.0
+        ],
+        [
+          0.891134614472068,
+          0.0
+        ]
+      ],
+      "reference_indices": [
+        71,
+        139,
+        70
+      ],
+      "target_labels": [
+        1,
+        1,
+        1
+      ],
+      "reachable_clusters": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "unique_target_labels": [
+        true,
+        true,
+        true
+      ],
+      "immutable_features": [
+        1
+      ],
+      "candidate_indices": [
+        70,
+        71,
+        139
+      ],
+      "selection_steps": [
+        {
+          "reference_index": 71,
+          "marginal_energy": 1.221771731205516,
+          "cumulative_energy": 1.221771731205516
+        },
+        {
+          "reference_index": 139,
+          "marginal_energy": 1.6860727766587646,
+          "cumulative_energy": 2.9078445078642807
+        },
+        {
+          "reference_index": 70,
+          "marginal_energy": 3.0438235030984173,
+          "cumulative_energy": 5.951668010962698
+        }
+      ],
+      "graph_distances": [
+        [
+          0.0,
+          0.3710142820362677,
+          0.18680702439328664
+        ],
+        [
+          0.3710142820362677,
+          0.0,
+          0.18420725764298104
+        ],
+        [
+          0.18680702439328664,
+          0.18420725764298104,
+          0.0
+        ]
+      ],
+      "normalization_scale": 5.958465155103452,
+      "status": "ok",
+      "reason": ""
+    }
+  }
+}

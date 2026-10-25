@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-10-25T21:04:13.843759+00:00",
+  "compiler": "Tectonic 0.17.0",
+  "pdf_producer": "xdvipdfmx (0.1)",
+  "source_markdown": "../visual_results.md",
+  "source_markdown_sha256": "7472bbb84791e117b1df5ad4b21d323fec0e1f5b47f26c1d739b7acabb51f405",
+  "input_sha256": {
+    "images/01_dbscan.png": "bd9fdf890e4ef85752b5e2c82c8c91ca19bcc61324a411943bafbb4db579f92c",
+    "images/02_exdbscan.png": "97ba962524b77ac277ed1596e9955df9d1cdc1161e4a0a6dc29ef2e0a7c2a7f3",
+    "images/03_constraints.png": "49c45a6b3f20874f7440fbaa7d0f71deda2d498229748921a7c7cc82a5f82010",
+    "images/04_validation.png": "af7c1bfce7ae839036ef4edbf2d21aa672bedc5b374178cd09cd1b9124ebc04d",
+    "images/05_real_data.png": "7852ed1d07bdbece5e56492d5b4775460e00c81357441a738449ea5f1e1cd5df",
+    "main.tex": "a27851cea4b3b28026e25801bcf0c5673ca840e2da2a312cb0f9489ce806ccb9"
+  },
+  "pdf_sha256": "7347648d305496058cda956339b208e174bfd62d005c794ab64585b739f10109",
+  "pages": 7,
+  "embedded_images_per_page": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "verified_text_blocks": 65,
+  "overfull_boxes": false,
+  "undefined_references": false,
+  "command": "tectonic --untrusted --keep-logs --outdir build main.tex",
+  "note": "PDF rendered by LaTeX through Tectonic/XeTeX. Figure PNGs are actual project outputs.",
+  "visual_review": {
+    "status": "passed",
+    "rendered_pages": 7,
+    "checks": [
+      "No clipping or overlap",
+      "All five figures legible",
+      "Tables and page numbering complete"
+    ]
+  }
+}

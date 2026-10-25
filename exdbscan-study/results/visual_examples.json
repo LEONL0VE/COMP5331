@@ -1,0 +1,759 @@
+{
+  "created_at": "2026-10-25T20:44:04.110921+00:00",
+  "source_fingerprint": "a5f287279c096457100a80c50c3f53bec59da51f2d4abf07178977c9e74df769",
+  "plot_script_sha256": "3d0e8c0319fdf50731c370f57595e437482b6ec68c8846ea93eeb0a757fef183",
+  "runtime": {
+    "python": "3.14.6",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.0"
+  },
+  "note": "Figures use actual implementation outputs. Saved examples are reproduced and independently validated. Aggregate statistics are checked against query CSVs.",
+  "examples": {
+    "Blobs + noise": {
+      "seed": 7,
+      "eps": 0.25,
+      "min_pts": 4,
+      "clusters": 3,
+      "point_types": {
+        "core": 120,
+        "border": 0,
+        "noise": 4
+      }
+    },
+    "Two moons": {
+      "seed": 7,
+      "eps": 0.16,
+      "min_pts": 3,
+      "clusters": 2,
+      "point_types": {
+        "core": 120,
+        "border": 0,
+        "noise": 0
+      }
+    },
+    "Concentric rings": {
+      "seed": 7,
+      "eps": 0.3,
+      "min_pts": 3,
+      "clusters": 2,
+      "point_types": {
+        "core": 140,
+        "border": 0,
+        "noise": 0
+      }
+    },
+    "moons_counterfactuals": {
+      "saved_example_reproduced": true,
+      "parameters": {
+        "seed": 7,
+        "eps": 0.16,
+        "min_pts": 3,
+        "point_index": 0
+      },
+      "explanation": {
+        "original": [
+          1.0000184523003623,
+          0.004481183062627048
+        ],
+        "source_cluster": 0,
+        "target_cluster": 1,
+        "requested_k": 3,
+        "returned_k": 3,
+        "counterfactuals": [
+          [
+            0.15169732369012884,
+            -0.30416118312880125
+          ],
+          [
+            1.8500417391423545,
+            -0.31539556668743834
+          ],
+          [
+            0.21455662385258628,
+            -0.5954192585711718
+          ]
+        ],
+        "changes": [
+          [
+            -0.8483211286102335,
+            -0.3086423661914283
+          ],
+          [
+            0.8500232868419921,
+            -0.3198767497500654
+          ],
+          [
+            -0.7854618284477761,
+            -0.5999004416337989
+          ]
+        ],
+        "reference_indices": [
+          60,
+          119,
+          67
+        ],
+        "target_labels": [
+          1,
+          1,
+          1
+        ],
+        "reachable_clusters": [
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "unique_target_labels": [
+          true,
+          true,
+          true
+        ],
+        "immutable_features": [],
+        "candidate_indices": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119
+        ],
+        "selection_steps": [
+          {
+            "reference_index": 60,
+            "marginal_energy": 1.129380213255152,
+            "cumulative_energy": 1.129380213255152
+          },
+          {
+            "reference_index": 119,
+            "marginal_energy": 1.170398561218,
+            "cumulative_energy": 2.299778774473152
+          },
+          {
+            "reference_index": 67,
+            "marginal_energy": 1.6055319189609514,
+            "cumulative_energy": 3.9053106934341035
+          }
+        ],
+        "graph_distances": [
+          [
+            0.0,
+            3.108894651426011,
+            0.35901619660850903
+          ],
+          [
+            3.108894651426011,
+            0.0,
+            2.7578698934851054
+          ],
+          [
+            0.35901619660850903,
+            2.757869893485105,
+            0.0
+          ]
+        ],
+        "normalization_scale": 10.975105701988817,
+        "status": "ok",
+        "reason": ""
+      },
+      "metrics": {
+        "status": "ok",
+        "requested_k": 3,
+        "returned_k": 3,
+        "valid_count": 3,
+        "returned_validity": 1.0,
+        "requested_validity": 1.0,
+        "complete": true,
+        "unique_target_rate": 1.0,
+        "immutable_preserved": true,
+        "mean_proximity": 0.9330963245176075,
+        "dpp_euclidean": 0.34241379087607327,
+        "dpp_reference_graph": 0.42382483567125667,
+        "mean_finite_reference_graph_distance": 2.0752602471732087,
+        "disconnected_reference_pairs": 0
+      },
+      "path_comparison": {
+        "reference_pair": [
+          60,
+          119
+        ],
+        "dijkstra_path_indices": [
+          60,
+          62,
+          65,
+          66,
+          68,
+          70,
+          73,
+          74,
+          77,
+          79,
+          83,
+          84,
+          86,
+          88,
+          89,
+          92,
+          95,
+          97,
+          100,
+          102,
+          105,
+          108,
+          111,
+          114,
+          116,
+          119
+        ],
+        "graph_distance": 3.108894651426011,
+        "euclidean_distance": 1.9984914784185823
+      }
+    },
+    "Both features mutable": {
+      "explanation": {
+        "original": [
+          0.0,
+          0.0
+        ],
+        "source_cluster": -1,
+        "target_cluster": 0,
+        "requested_k": 1,
+        "returned_k": 1,
+        "counterfactuals": [
+          [
+            1.920739580492897,
+            0.3973943959640477
+          ]
+        ],
+        "changes": [
+          [
+            1.920739580492897,
+            0.3973943959640477
+          ]
+        ],
+        "reference_indices": [
+          3
+        ],
+        "target_labels": [
+          0
+        ],
+        "reachable_clusters": [
+          [
+            0
+          ]
+        ],
+        "unique_target_labels": [
+          true
+        ],
+        "immutable_features": [],
+        "candidate_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selection_steps": [
+          {
+            "reference_index": 3,
+            "marginal_energy": 8.77,
+            "cumulative_energy": 8.77
+          }
+        ],
+        "graph_distances": [
+          [
+            0.0
+          ]
+        ],
+        "normalization_scale": 21.684485496374418,
+        "status": "ok",
+        "reason": ""
+      },
+      "metrics": {
+        "status": "ok",
+        "requested_k": 1,
+        "returned_k": 1,
+        "valid_count": 1,
+        "returned_validity": 1.0,
+        "requested_validity": 1.0,
+        "complete": true,
+        "unique_target_rate": 1.0,
+        "immutable_preserved": true,
+        "mean_proximity": 1.9614185789921692,
+        "dpp_euclidean": 1.0,
+        "dpp_reference_graph": 1.0,
+        "mean_finite_reference_graph_distance": null,
+        "disconnected_reference_pairs": 0
+      }
+    },
+    "Feature 1 fixed: y = 0": {
+      "explanation": {
+        "original": [
+          0.0,
+          0.0
+        ],
+        "source_cluster": -1,
+        "target_cluster": 0,
+        "requested_k": 1,
+        "returned_k": 1,
+        "counterfactuals": [
+          [
+            2.1,
+            0.0
+          ]
+        ],
+        "changes": [
+          [
+            2.1,
+            0.0
+          ]
+        ],
+        "reference_indices": [
+          3
+        ],
+        "target_labels": [
+          0
+        ],
+        "reachable_clusters": [
+          [
+            0
+          ]
+        ],
+        "unique_target_labels": [
+          true
+        ],
+        "immutable_features": [
+          1
+        ],
+        "candidate_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selection_steps": [
+          {
+            "reference_index": 3,
+            "marginal_energy": 8.77,
+            "cumulative_energy": 8.77
+          }
+        ],
+        "graph_distances": [
+          [
+            0.0
+          ]
+        ],
+        "normalization_scale": 21.684485496374418,
+        "status": "ok",
+        "reason": ""
+      },
+      "metrics": {
+        "status": "ok",
+        "requested_k": 1,
+        "returned_k": 1,
+        "valid_count": 1,
+        "returned_validity": 1.0,
+        "requested_validity": 1.0,
+        "complete": true,
+        "unique_target_rate": 1.0,
+        "immutable_preserved": true,
+        "mean_proximity": 2.1,
+        "dpp_euclidean": 1.0,
+        "dpp_reference_graph": 1.0,
+        "mean_finite_reference_graph_distance": null,
+        "disconnected_reference_pairs": 0
+      }
+    },
+    "Feature 0 fixed: x = 0": {
+      "explanation": {
+        "original": [
+          0.0,
+          0.0
+        ],
+        "source_cluster": -1,
+        "target_cluster": 0,
+        "requested_k": 1,
+        "returned_k": 0,
+        "counterfactuals": [],
+        "changes": [],
+        "reference_indices": [],
+        "target_labels": [],
+        "reachable_clusters": [],
+        "unique_target_labels": [],
+        "immutable_features": [
+          0
+        ],
+        "candidate_indices": [],
+        "selection_steps": [],
+        "graph_distances": [],
+        "normalization_scale": 1.0,
+        "status": "infeasible",
+        "reason": "No target core ball intersects the immutable-coordinate slice"
+      },
+      "metrics": {
+        "status": "infeasible",
+        "requested_k": 1,
+        "returned_k": 0,
+        "valid_count": 0,
+        "returned_validity": 0.0,
+        "requested_validity": 0.0,
+        "complete": false,
+        "unique_target_rate": 0.0,
+        "immutable_preserved": true,
+        "mean_proximity": null,
+        "dpp_euclidean": null,
+        "dpp_reference_graph": null,
+        "mean_finite_reference_graph_distance": null,
+        "disconnected_reference_pairs": 0
+      }
+    },
+    "greedy_summary": [
+      {
+        "dataset": "blobs",
+        "strategy": "greedy",
+        "constraint": "immutable",
+        "queries": 288,
+        "requested": 864,
+        "returned": 432,
+        "valid": 432,
+        "returned_validity": 1.0,
+        "requested_validity": 0.5,
+        "complete_queries": 144,
+        "status_counts": {
+          "ok": 144,
+          "infeasible": 144
+        },
+        "mean_query_proximity": 2.8767610511282142,
+        "total_query_seconds": 0.05961237984593026
+      },
+      {
+        "dataset": "blobs",
+        "strategy": "greedy",
+        "constraint": "unconstrained",
+        "queries": 288,
+        "requested": 864,
+        "returned": 864,
+        "valid": 864,
+        "returned_validity": 1.0,
+        "requested_validity": 1.0,
+        "complete_queries": 288,
+        "status_counts": {
+          "ok": 288
+        },
+        "mean_query_proximity": 2.514279480661152,
+        "total_query_seconds": 0.10560204199282452
+      },
+      {
+        "dataset": "moons",
+        "strategy": "greedy",
+        "constraint": "immutable",
+        "queries": 96,
+        "requested": 288,
+        "returned": 0,
+        "valid": 0,
+        "returned_validity": 0,
+        "requested_validity": 0.0,
+        "complete_queries": 0,
+        "status_counts": {
+          "infeasible": 96
+        },
+        "mean_query_proximity": null,
+        "total_query_seconds": 0.0020213727257214487
+      },
+      {
+        "dataset": "moons",
+        "strategy": "greedy",
+        "constraint": "unconstrained",
+        "queries": 96,
+        "requested": 288,
+        "returned": 288,
+        "valid": 288,
+        "returned_validity": 1.0,
+        "requested_validity": 1.0,
+        "complete_queries": 96,
+        "status_counts": {
+          "ok": 96
+        },
+        "mean_query_proximity": 0.9605441703269321,
+        "total_query_seconds": 0.03038795801694505
+      },
+      {
+        "dataset": "rings",
+        "strategy": "greedy",
+        "constraint": "immutable",
+        "queries": 96,
+        "requested": 288,
+        "returned": 234,
+        "valid": 234,
+        "returned_validity": 1.0,
+        "requested_validity": 0.8125,
+        "complete_queries": 76,
+        "status_counts": {
+          "ok": 76,
+          "partial": 5,
+          "infeasible": 15
+        },
+        "mean_query_proximity": 1.2619758661392095,
+        "total_query_seconds": 0.011412457999540493
+      },
+      {
+        "dataset": "rings",
+        "strategy": "greedy",
+        "constraint": "unconstrained",
+        "queries": 96,
+        "requested": 288,
+        "returned": 288,
+        "valid": 288,
+        "returned_validity": 1.0,
+        "requested_validity": 1.0,
+        "complete_queries": 96,
+        "status_counts": {
+          "ok": 96
+        },
+        "mean_query_proximity": 1.1107968334293805,
+        "total_query_seconds": 0.024323289981111884
+      },
+      {
+        "dataset": "usgs_southern_california_2024",
+        "strategy": "greedy",
+        "constraint": "immutable",
+        "queries": 324,
+        "requested": 972,
+        "returned": 106,
+        "valid": 106,
+        "returned_validity": 1.0,
+        "requested_validity": 0.10905349794238683,
+        "complete_queries": 33,
+        "status_counts": {
+          "infeasible": 285,
+          "ok": 33,
+          "partial": 6
+        },
+        "mean_query_proximity": 73109.82336255291,
+        "total_query_seconds": 0.019628212874522433
+      },
+      {
+        "dataset": "usgs_southern_california_2024",
+        "strategy": "greedy",
+        "constraint": "unconstrained",
+        "queries": 324,
+        "requested": 972,
+        "returned": 972,
+        "valid": 972,
+        "returned_validity": 1.0,
+        "requested_validity": 1.0,
+        "complete_queries": 324,
+        "status_counts": {
+          "ok": 324
+        },
+        "mean_query_proximity": 135423.85653001536,
+        "total_query_seconds": 0.130183248227695
+      }
+    ],
+    "usgs_counterfactuals": {
+      "saved_example_reproduced": true,
+      "parameters": {
+        "seed": 7,
+        "eps": 2000,
+        "min_pts": 5,
+        "point_index": 0
+      },
+      "explanation": {
+        "original": [
+          -34139.13800381037,
+          -46720.46991795926
+        ],
+        "source_cluster": -1,
+        "target_cluster": 0,
+        "requested_k": 3,
+        "returned_k": 3,
+        "counterfactuals": [
+          [
+            173457.5394982975,
+            -82886.26382586545
+          ],
+          [
+            173534.74940079075,
+            -83143.47143415187
+          ],
+          [
+            174608.83836986916,
+            -82447.34621426387
+          ]
+        ],
+        "changes": [
+          [
+            207596.67750210786,
+            -36165.79390790619
+          ],
+          [
+            207673.88740460112,
+            -36423.00151619261
+          ],
+          [
+            208747.97637367953,
+            -35726.87629630462
+          ]
+        ],
+        "reference_indices": [
+          8,
+          947,
+          551
+        ],
+        "target_labels": [
+          0,
+          0,
+          0
+        ],
+        "reachable_clusters": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "unique_target_labels": [
+          true,
+          true,
+          true
+        ],
+        "immutable_features": [],
+        "candidate_indices": [
+          8,
+          532,
+          533,
+          551,
+          947
+        ],
+        "selection_steps": [
+          {
+            "reference_index": 8,
+            "marginal_energy": 45251238700.545715,
+            "cumulative_energy": 45251238700.545715
+          },
+          {
+            "reference_index": 947,
+            "marginal_energy": 45302453469.84085,
+            "cumulative_energy": 90553692170.38657
+          },
+          {
+            "reference_index": 551,
+            "marginal_energy": 45703260163.31252,
+            "cumulative_energy": 136256952333.6991
+          }
+        ],
+        "graph_distances": [
+          [
+            0.0,
+            270.58460098531503,
+            1235.1723496697898
+          ],
+          [
+            270.58460098531503,
+            0.0,
+            1285.546125389292
+          ],
+          [
+            1235.1723496697898,
+            1285.546125389292,
+            0.0
+          ]
+        ],
+        "normalization_scale": 232.352167493192,
+        "status": "ok",
+        "reason": ""
+      },
+      "metrics": {
+        "status": "ok",
+        "requested_k": 3,
+        "returned_k": 3,
+        "valid_count": 3,
+        "returned_validity": 1.0,
+        "requested_validity": 1.0,
+        "complete": true,
+        "unique_target_rate": 1.0,
+        "immutable_preserved": true,
+        "mean_proximity": 211116.7746342097,
+        "dpp_euclidean": 0.9999849739747318,
+        "dpp_reference_graph": 0.9999851882607674,
+        "mean_finite_reference_graph_distance": 930.4343586814657,
+        "disconnected_reference_pairs": 0
+      }
+    }
+  },
+  "figures": {
+    "01_dbscan.png": "bd9fdf890e4ef85752b5e2c82c8c91ca19bcc61324a411943bafbb4db579f92c",
+    "01_dbscan.svg": "0a48a81ab4f8201774de9150ed7b779b36fdc7d6ce2618e9b86f44e9212570e6",
+    "02_exdbscan.png": "97ba962524b77ac277ed1596e9955df9d1cdc1161e4a0a6dc29ef2e0a7c2a7f3",
+    "02_exdbscan.svg": "32029fc20befc4457856b87a30946345f9ced1542a01bf1326feef5cadb14143",
+    "03_constraints.png": "49c45a6b3f20874f7440fbaa7d0f71deda2d498229748921a7c7cc82a5f82010",
+    "03_constraints.svg": "7fec6c186a4d2ab1b1529dbab95db07d29ec85805527e1ae8a94965b0664cbfd",
+    "04_validation.png": "af7c1bfce7ae839036ef4edbf2d21aa672bedc5b374178cd09cd1b9124ebc04d",
+    "04_validation.svg": "c6d9f5361f389a0694258e68b2c20ac988e4905d862bfcb0d3fcfa9f0881c49b",
+    "05_real_data.png": "7852ed1d07bdbece5e56492d5b4775460e00c81357441a738449ea5f1e1cd5df",
+    "05_real_data.svg": "033b0183f7b7501aaf4864660235e7cf93dea7a20cddd9e24d4a2ccc9e43b71f"
+  }
+}

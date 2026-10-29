@@ -1,13 +1,13 @@
 # LaTeX Version of the Visual Results Report
 
 The original English Markdown report remains at `../visual_results.md`.
-This folder contains its complete LaTeX version, all five figure images, and
+This folder contains its complete LaTeX version, all six figure images, and
 the PDF rendered from that source.
 
 ## Files
 
 - `main.tex`: complete, editable LaTeX source.
-- `images/`: the five report figures, copied from `../../results/figures/`.
+- `images/`: the six report figures, copied from `../../results/figures/`.
 - `visual_results.pdf`: the compiled report.
 - `compilation.json`: compiler information and hashes for the verified PDF,
   source, Markdown report, and figure inputs.

@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-10-28T14:14:23.065022+00:00",
+  "points": [
+    [
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.1,
+      0.0
+    ],
+    [
+      0.2,
+      0.0
+    ],
+    [
+      3.0,
+      0.0
+    ]
+  ],
+  "eps": 0.81,
+  "min_pts": 3,
+  "labels": [
+    0,
+    0,
+    0,
+    0,
+    -1
+  ],
+  "point_types": [
+    "border",
+    "core",
+    "core",
+    "core",
+    "noise"
+  ],
+  "neighbor_counts": [
+    2,
+    3,
+    3,
+    4,
+    1
+  ],
+  "selected_index": 0,
+  "selected_neighbors": [
+    0,
+    3
+  ],
+  "selected_core_neighbors": [
+    3
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "matplotlib": "3.11.2"
+  },
+  "plot_script_sha256": "6b30137998e17408c3bf996878e34ddfe756140fa5aaac2c6861934c31187a74",
+  "figures": {
+    "01a_dbscan_explanation.png": "9a465063f4d9b1307e98b3b78ef754da2ae5cd13340d4b433ed94c739c49732b",
+    "01a_dbscan_explanation.svg": "7abe7241484972db5024b0d62b2917098a87a6f7d66cb8089447daa95d1ab71f"
+  }
+}

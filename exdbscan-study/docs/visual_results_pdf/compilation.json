@@ -1,19 +1,20 @@
 {
-  "created_at": "2026-10-25T21:04:13.843759+00:00",
-  "compiler": "Tectonic 0.17.0",
-  "pdf_producer": "xdvipdfmx (0.1)",
+  "created_at": "2026-10-28T14:17:10.525045+00:00",
+  "compiler": "latexmk 4.86a with pdfTeX 1.40.27",
+  "pdf_producer": "pdfTeX-1.40.27",
   "source_markdown": "../visual_results.md",
-  "source_markdown_sha256": "7472bbb84791e117b1df5ad4b21d323fec0e1f5b47f26c1d739b7acabb51f405",
+  "source_markdown_sha256": "78e0c6cdf3694088d232060828f617dd092e64e98958d7638ee1eb3b40b96a3b",
   "input_sha256": {
     "images/01_dbscan.png": "bd9fdf890e4ef85752b5e2c82c8c91ca19bcc61324a411943bafbb4db579f92c",
+    "images/01a_dbscan_explanation.png": "9a465063f4d9b1307e98b3b78ef754da2ae5cd13340d4b433ed94c739c49732b",
     "images/02_exdbscan.png": "97ba962524b77ac277ed1596e9955df9d1cdc1161e4a0a6dc29ef2e0a7c2a7f3",
     "images/03_constraints.png": "49c45a6b3f20874f7440fbaa7d0f71deda2d498229748921a7c7cc82a5f82010",
     "images/04_validation.png": "af7c1bfce7ae839036ef4edbf2d21aa672bedc5b374178cd09cd1b9124ebc04d",
     "images/05_real_data.png": "7852ed1d07bdbece5e56492d5b4775460e00c81357441a738449ea5f1e1cd5df",
-    "main.tex": "a27851cea4b3b28026e25801bcf0c5673ca840e2da2a312cb0f9489ce806ccb9"
+    "main.tex": "41f049fd93e66e41924d39497feec10ecaf03de70d20189a4b18ba0b968f044b"
   },
-  "pdf_sha256": "7347648d305496058cda956339b208e174bfd62d005c794ab64585b739f10109",
-  "pages": 7,
+  "pdf_sha256": "847658d11b151badc064626f4903569e7837ad418361506f6b6d0010a976ca9f",
+  "pages": 8,
   "embedded_images_per_page": [
     0,
     1,
@@ -21,19 +22,19 @@
     1,
     1,
     1,
+    1,
     0
   ],
-  "verified_text_blocks": 65,
   "overfull_boxes": false,
   "undefined_references": false,
-  "command": "tectonic --untrusted --keep-logs --outdir build main.tex",
-  "note": "PDF rendered by LaTeX through Tectonic/XeTeX. Figure PNGs are actual project outputs.",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -silent main.tex",
+  "note": "The original five figures and experiment records are preserved; Figure 1A is generated separately.",
   "visual_review": {
     "status": "passed",
-    "rendered_pages": 7,
+    "rendered_pages": 8,
     "checks": [
       "No clipping or overlap",
-      "All five figures legible",
+      "All six figures legible",
       "Tables and page numbering complete"
     ]
   }

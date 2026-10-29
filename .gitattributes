@@ -1,0 +1,2 @@
+# Preserve byte-identical public-data snapshots so recorded hashes survive checkout.
+exdbscan-study/data/raw/*.csv -text

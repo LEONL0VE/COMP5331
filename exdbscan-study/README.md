@@ -134,6 +134,7 @@ separately indicates unique membership.
 
 For figures explaining the implemented functionality and the measured results,
 see [Visual Results](docs/visual_results.md). The gallery covers DBSCAN clusters,
+a hand-checkable local epsilon-neighborhood with core, border, and noise points,
 ExDBSCAN reference selection and projection, immutable-feature constraints,
 experiment coverage, and a real-data example. All figures are available as PNG
 and editable SVG files in `results/figures/`.

@@ -11,7 +11,7 @@ the full paper's benchmark results have been reproduced.
 
 | Functionality | Evidence |
 |---|---|
-| DBSCAN neighborhood counts and core/border/noise classification | 12 DBSCAN tests and Figure 1 |
+| DBSCAN neighborhood counts and core/border/noise classification | 12 DBSCAN tests, Figure 1, and Figure 1A |
 | Density-connected cluster expansion and non-spherical clusters | Independent connected-component oracle, two moons, and concentric rings |
 | Candidate core graph and Dijkstra shortest paths | 5 graph tests, Floyd-Warshall comparison, and Figure 2 |
 | Greedy reference selection and counterfactual projection | 17 ExDBSCAN tests, full-energy comparison, and Figure 2 |
@@ -38,6 +38,21 @@ crosses denote noise. These particular settings produce no border points; border
 classification, shared borders, and noise-to-border reassignment are covered by
 the DBSCAN tests. Results depend on epsilon and MinPts; these panels illustrate
 selected configurations, not every setting in the grid.
+
+## Figure 1A: A Local Explanation of Core, Border, and Noise
+
+![Five-point DBSCAN example with an epsilon neighborhood](../results/figures/01a_dbscan_explanation.png)
+
+This fixed five-point case contains three core points, one border point, and one
+noise point. With epsilon=0.81 and MinPts=3, selected point 0 has only two
+neighbors when the point itself is included, so it is not core. It is nevertheless
+within the epsilon-neighborhood of core point 3 and is therefore a border point.
+The distant point 4 has no neighboring core point and remains noise.
+
+The example is intentionally small enough to check by hand. The plotting script
+asserts the point roles, neighbor counts, selected neighborhood, and neighboring
+core point before producing the figure. It complements the larger synthetic
+datasets used for parameter experiments.
 
 ## Figure 2: Core Graph, Reference Selection, and Counterfactuals
 
@@ -127,14 +142,21 @@ From the project root, after validation and both experiment stages have passed:
 # Optional plotting dependency; not required by either algorithm
 python3 -m pip install matplotlib
 python3 examples/plot_results.py
+# Figure 1A can be regenerated independently of the saved experiments:
+python3 examples/plot_dbscan_explanation.py
 ```
 
-The script writes five PNG images and five editable vector SVG files to
+The original script writes five PNG images and five editable vector SVG files to
 `results/figures/`. It also writes `results/visual_examples.json`, which records
 the demonstration outputs, independent metrics, shortest-path evidence, plotting
 runtime, source fingerprint, script hash, and figure hashes. Saved aggregate
 counts are cross-checked against the query CSVs, and the real-data snapshot hash
 is checked before plotting.
+
+The separate `plot_dbscan_explanation.py` script produces Figure 1A without
+rerunning or changing the saved experiments or their five figures. It records
+the five-point input, DBSCAN output, neighborhood checks, rendering runtime,
+and figure hashes in `results/dbscan_local_example.json`.
 
 The plot-generation runtime can differ from the algorithm-test runtime; both
 are recorded separately. Existing tests, experiment results, and algorithm

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#05070a">
+  <title>Earthquake Clusters, Explained</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="map" role="region" aria-label="Map of the data"></div>
+
+  <aside id="sheet" class="sheet" aria-live="polite">
+    <div class="intro">
+      <p class="course">COMP5331 · Group 1</p>
+      <h1>Earthquake clusters, explained</h1>
+      <p class="lede">In 2024, 1,260 earthquakes of magnitude 2 or more shook Southern California. See how DBSCAN groups them, why each one ends up where it does, and how far it would have to move to join another group.</p>
+      <button type="button" class="primary" data-action="explore" disabled>Loading…</button>
+      <p class="credits">Data from the USGS earthquake catalog. DBSCAN after Ester et al. (1996), explanations after ExDBSCAN by Matthews et al. (2026).</p>
+    </div>
+  </aside>
+
+  <div class="map-controls" id="map-controls" hidden>
+    <button type="button" data-action="globe" aria-label="Back to the globe" title="Back to the globe">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.2"/><ellipse cx="8" cy="8" rx="2.6" ry="6.2"/><path d="M2 8h12"/></g></svg>
+    </button>
+    <button type="button" data-action="zoom-in" aria-label="Zoom in">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" data-action="zoom-out" aria-label="Zoom out">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" data-action="fit" aria-label="Show all data">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+  <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

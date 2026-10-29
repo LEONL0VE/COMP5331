@@ -12,6 +12,20 @@ python3 interactive/server/app.py
 
 Then open http://127.0.0.1:8765. Pass `--port 9000` to use another port.
 
+## Screenshots
+
+**Data.** All 1,260 earthquakes, sized by magnitude.
+
+![Data page: every 2024 earthquake as a white dot on a dark map of Southern California](screenshots/data.png)
+
+**Cluster.** DBSCAN with the defaults (ε = 5 km, 10 neighbors needed) finds 20 clusters, named after nearby towns. The blue callout points at a quake to click next.
+
+![Cluster page: orange clusters with town names, grey noise points, and the radius and neighbor sliders](screenshots/cluster.png)
+
+**Explain.** The San Bernardino quake from the example below. It is noise, and moving 3.3 km south would put it inside the Loma Linda cluster.
+
+![Explain page: the selected quake's 5 km circle and a 3.3 km route into the Loma Linda cluster](screenshots/explain.png)
+
 ## Example
 
 1. Click **Explore Southern California**. The globe turns, flies to the region and flattens into a map, and the 1,260 earthquakes appear.

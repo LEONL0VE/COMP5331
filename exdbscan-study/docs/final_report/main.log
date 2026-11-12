@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  12 NOV 2026 10:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  12 NOV 2026 23:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -415,7 +415,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@count@id=\count312
 \enitdp@description=\count313
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 22.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 35.
  (d:/APP/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (d:/APP/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -425,24 +425,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -452,15 +452,15 @@ LaTeX Font Info:    ... okay on input line 22.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* h-part:(L,W,R)=(62.59605pt, 472.31577pt, 62.59605pt)
+* v-part:(T,H,B)=(62.59605pt, 719.85474pt, 62.59605pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
+* \textwidth=472.31577pt
+* \textheight=719.85474pt
+* \oddsidemargin=-9.67393pt
+* \evensidemargin=-9.67393pt
+* \topmargin=-46.67393pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -478,20 +478,20 @@ LaTeX Font Info:    ... okay on input line 22.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 22.
-Package microtype Info: Applying patch `item' on input line 22.
-Package microtype Info: Applying patch `toc' on input line 22.
-Package microtype Info: Applying patch `eqnum' on input line 22.
-Package microtype Info: Applying patch `footnote' on input line 22.
-Package microtype Info: Applying patch `verbatim' on input line 22.
-LaTeX Info: Redefining \microtypesetup on input line 22.
+LaTeX Info: Redefining \microtypecontext on input line 35.
+Package microtype Info: Applying patch `item' on input line 35.
+Package microtype Info: Applying patch `toc' on input line 35.
+Package microtype Info: Applying patch `eqnum' on input line 35.
+Package microtype Info: Applying patch `footnote' on input line 35.
+Package microtype Info: Applying patch `verbatim' on input line 35.
+LaTeX Info: Redefining \microtypesetup on input line 35.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 22.
+LaTeX Info: Redefining \showhyphens on input line 35.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -519,116 +519,74 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 35.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 38.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 53.
  (d:/APP/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 38.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 53.
  (d:/APP/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 38.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 53.
  (d:/APP/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 38.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 53.
  (d:/APP/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 38.
+(Font)              <10.95> on input line 53.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 38.
+(Font)              <8> on input line 53.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 38.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+(Font)              <6> on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
  (d:/APP/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (d:/APP/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
  (d:/APP/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (d:/APP/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<images/01a_dbscan_explanation.png, id=83, 925.056pt x 419.166pt>
+<images/01a_dbscan_explanation.png, id=107, 925.056pt x 419.166pt>
 File: images/01a_dbscan_explanation.png Graphic file (type png)
 <use images/01a_dbscan_explanation.png>
-Package pdftex.def Info: images/01a_dbscan_explanation.png  used on input line 40.
-(pdftex.def)             Requested size: 449.76672pt x 203.80054pt.
+Package pdftex.def Info: images/01a_dbscan_explanation.png  used on input line 57.
+(pdftex.def)             Requested size: 381.27977pt x 172.7674pt.
 
 
 [1
 
-{d:/APP/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+{d:/APP/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./images/01a_dbscan_explanation.png>]
 
-[2{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./images/01a_dbscan_explanation.png>]
-<images/02_exdbscan.png, id=123, 925.056pt x 433.62pt>
+[2{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<images/02_exdbscan.png, id=148, 925.056pt x 433.62pt>
 File: images/02_exdbscan.png Graphic file (type png)
 <use images/02_exdbscan.png>
-Package pdftex.def Info: images/02_exdbscan.png  used on input line 73.
-(pdftex.def)             Requested size: 449.79495pt x 210.84138pt.
-
-
-[3{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./images/02_exdbscan.png>]
-<images/03_constraints.png, id=136, 997.326pt x 411.939pt>
+Package pdftex.def Info: images/02_exdbscan.png  used on input line 93.
+(pdftex.def)             Requested size: 383.91931pt x 179.96217pt.
+<images/03_constraints.png, id=151, 997.326pt x 411.939pt>
 File: images/03_constraints.png Graphic file (type png)
 <use images/03_constraints.png>
-Package pdftex.def Info: images/03_constraints.png  used on input line 83.
-(pdftex.def)             Requested size: 455.24496pt x 188.03595pt.
+Package pdftex.def Info: images/03_constraints.png  used on input line 103.
+(pdftex.def)             Requested size: 400.82558pt x 165.55838pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 84.
+(Font)              <10> on input line 104.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 84.
+(Font)              <7> on input line 104.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 84.
-<images/explorer_cluster.png, id=139, 2890.8pt x 1806.75pt>
-File: images/explorer_cluster.png Graphic file (type png)
-<use images/explorer_cluster.png>
-Package pdftex.def Info: images/explorer_cluster.png  used on input line 94.
-(pdftex.def)             Requested size: 337.30916pt x 210.81822pt.
-
-
-[4 <./images/03_constraints.png>]
-<images/explorer_explain.png, id=148, 2890.8pt x 1806.75pt>
-File: images/explorer_explain.png Graphic file (type png)
-<use images/explorer_explain.png>
-Package pdftex.def Info: images/explorer_explain.png  used on input line 103.
-(pdftex.def)             Requested size: 337.30916pt x 210.81822pt.
-
-
-[5 <./images/explorer_cluster.png (PNG copy)> <./images/explorer_explain.png (PNG copy)>]
-<images/01_dbscan.png, id=157, 997.326pt x 375.804pt>
-File: images/01_dbscan.png Graphic file (type png)
-<use images/01_dbscan.png>
-Package pdftex.def Info: images/01_dbscan.png  used on input line 125.
-(pdftex.def)             Requested size: 455.24496pt x 171.54158pt.
-
-
-[6]
-
-[7 <./images/01_dbscan.png>]
-<images/05_real_data.png, id=178, 925.056pt x 440.847pt>
-File: images/05_real_data.png Graphic file (type png)
-<use images/05_real_data.png>
-Package pdftex.def Info: images/05_real_data.png  used on input line 175.
-(pdftex.def)             Requested size: 427.64821pt x 203.80109pt.
-<images/04_validation.png, id=179, 925.056pt x 419.166pt>
-File: images/04_validation.png Graphic file (type png)
-<use images/04_validation.png>
-Package pdftex.def Info: images/04_validation.png  used on input line 180.
-(pdftex.def)             Requested size: 387.74454pt x 175.69673pt.
-
-
-[8 <./images/05_real_data.png> <./images/04_validation.png>] (./main.bbl
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7.
+(Font)              <5> on input line 104.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 110.
  (d:/APP/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -638,29 +596,92 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[9])
+[3{d:/APP/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./images/02_exdbscan.png>]
+<images/explorer_cluster.png, id=165, 2890.8pt x 1806.75pt>
+File: images/explorer_cluster.png Graphic file (type png)
+<use images/explorer_cluster.png>
+Package pdftex.def Info: images/explorer_cluster.png  used on input line 136.
+(pdftex.def)             Requested size: 287.90596pt x 179.94122pt.
 
-[10] (./main.aux)
+
+[4 <./images/03_constraints.png>]
+<images/explorer_explain.png, id=174, 2890.8pt x 1806.75pt>
+File: images/explorer_explain.png Graphic file (type png)
+<use images/explorer_explain.png>
+Package pdftex.def Info: images/explorer_explain.png  used on input line 144.
+(pdftex.def)             Requested size: 287.90596pt x 179.94122pt.
+
+
+[5 <./images/explorer_cluster.png (PNG copy)> <./images/explorer_explain.png (PNG copy)>]
+<images/01_dbscan.png, id=185, 997.326pt x 375.804pt>
+File: images/01_dbscan.png Graphic file (type png)
+<use images/01_dbscan.png>
+Package pdftex.def Info: images/01_dbscan.png  used on input line 173.
+(pdftex.def)             Requested size: 458.50162pt x 172.76872pt.
+
+
+[6]
+<images/05_real_data.png, id=197, 925.056pt x 440.847pt>
+File: images/05_real_data.png Graphic file (type png)
+<use images/05_real_data.png>
+Package pdftex.def Info: images/05_real_data.png  used on input line 223.
+(pdftex.def)             Requested size: 362.52068pt x 172.76375pt.
+<images/04_validation.png, id=198, 925.056pt x 419.166pt>
+File: images/04_validation.png Graphic file (type png)
+<use images/04_validation.png>
+Package pdftex.def Info: images/04_validation.png  used on input line 228.
+(pdftex.def)             Requested size: 397.15938pt x 179.96283pt.
+
+
+[7 <./images/01_dbscan.png>]
+
+[8 <./images/05_real_data.png> <./images/04_validation.png>]
+<images/01b_parameter_sweep.png, id=216, 997.326pt x 390.258pt>
+File: images/01b_parameter_sweep.png Graphic file (type png)
+<use images/01b_parameter_sweep.png>
+Package pdftex.def Info: images/01b_parameter_sweep.png  used on input line 240.
+(pdftex.def)             Requested size: 423.10466pt x 165.56268pt.
+<images/01d_constrained_sweep.png, id=218, 997.326pt x 390.258pt>
+File: images/01d_constrained_sweep.png Graphic file (type png)
+<use images/01d_constrained_sweep.png>
+Package pdftex.def Info: images/01d_constrained_sweep.png  used on input line 250.
+(pdftex.def)             Requested size: 423.10466pt x 165.56268pt.
+<images/01c_limitations.png, id=220, 997.326pt x 404.712pt>
+File: images/01c_limitations.png Graphic file (type png)
+<use images/01c_limitations.png>
+Package pdftex.def Info: images/01c_limitations.png  used on input line 260.
+(pdftex.def)             Requested size: 407.99324pt x 165.56247pt.
+
+
+[9 <./images/01b_parameter_sweep.png> <./images/01d_constrained_sweep.png>]
+
+[10 <./images/01c_limitations.png>] (./main.bbl)
+
+[11]
+
+[12]
+
+[13] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E7B2CA3C37F876EA4E1057BEAB3B492E;3452.
+(rerunfilecheck)             Checksum: 92631F9E6656FEE9E058781C477D5DA9;4890.
  ) 
 Here is how much of TeX's memory you used:
- 15416 strings out of 473190
- 245318 string characters out of 5717895
- 690345 words of memory out of 5000000
- 38199 multiletter control sequences out of 15000+600000
- 627518 words of font info for 178 fonts, out of 8000000 for 9000
+ 15503 strings out of 473190
+ 246933 string characters out of 5717895
+ 689348 words of memory out of 5000000
+ 38238 multiletter control sequences out of 15000+600000
+ 628812 words of font info for 194 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,997b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1123b,470s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><d:/APP/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (10 pages, 4579408 bytes).
+Output written on main.pdf (13 pages, 5272183 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 35521 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 35584 words of extra memory for PDF output out of 35830 (max. 10000000)
 

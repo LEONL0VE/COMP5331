@@ -29,7 +29,7 @@
 \end{center}
 
 \begin{abstract}
-    DBSCAN identifies clusters of arbitrary shape and labels isolated observations as noise, but a cluster plot alone does not explain an individual assignment. We implement DBSCAN and the ExDBSCAN counterfactual procedure, and provide visual views of the overall clustering, a selected point's neighborhood, and a possible change in assignment. Controlled synthetic datasets and a snapshot of 1,260 Southern California earthquake locations are used to examine correctness, parameter sensitivity, and counterfactual feasibility. In the saved experiments, the greedy method returned 3,184 counterfactuals, all of which passed an independent target-neighborhood check. With one feature fixed, however, some requests had only partial results or no feasible result. The examples illustrate how explanations depend on the clustering parameters and on the constraints placed on a point.
+    DBSCAN identifies clusters of arbitrary shape and labels isolated observations as noise, but a cluster plot alone does not explain an individual assignment. We implement DBSCAN and the ExDBSCAN counterfactual procedure, and provide visual views of the overall clustering, a selected point's neighborhood, and a possible change in assignment. Controlled synthetic datasets and a snapshot of 1,260 Southern California earthquake locations are used to examine correctness, parameter sensitivity, and counterfactual feasibility. In the saved experiments, the greedy method returned 3,184 counterfactuals, all of which passed an independent target-neighborhood check. With one feature fixed, however, some requests had only partial results or no feasible result. The examples illustrate how explanations depend on the clustering parameters and on the constraints placed on a point. We additionally implement a positional robustness certificate and test fixed endpoints across nearby parameter settings, making the trade-off between movement cost and stability explicit.
 \end{abstract}
 
 \section{Introduction}
@@ -93,6 +93,28 @@ The method reports an infeasible result when no candidate neighborhood can be re
     \label{fig:constraints}
 \end{figure}
 
+\subsection{Certified positional robustness}
+\label{sec:robust-method}
+A nearest counterfactual can lie on a target core neighborhood's boundary, where a small outward position error may invalidate it. We add a single-endpoint extension with requested tolerance $0\leq\tau<\eps$ ($\tau$ is named \texttt{rho} in the implementation). For each target core $q$, we project the query $p$ onto
+\[
+    S_q(\tau)=\{z:\|z-q\|\leq\eps-\tau,\ z_I=p_I\},
+\]
+where $I$ denotes immutable coordinates. The set is empty if $\|p_I-q_I\|>\eps-\tau$. Otherwise the mutable slice has radius $\sqrt{(\eps-\tau)^2-\|p_I-q_I\|^2}$, so the existing analytic projection applies. We select the feasible projection minimizing $\|z-p\|$, breaking ties by core index, or report infeasibility if none exists. This minimizes movement over the union of these shrunken ball slices. Unlike nearest-core selection, it compares actual endpoint movement, which matters under constraints. The scan costs $O(Kd)$ for $K$ target cores and $d$ features, excluding the existing clustering fit.
+
+\begin{samepage}
+For the selected core, $m=\eps-\|z-q\|\geq\tau$ is a sufficient certificate. Every perturbation $u$ with $\|u\|\leq m$ satisfies
+\begin{equation}
+    \|z+u-q\|\leq\|z-q\|+\|u\|\leq(\eps-m)+m=\eps.
+\end{equation}
+\end{samepage}
+Thus the perturbed endpoint remains reachable from a target core in the frozen fitted model. This is a single-ball guarantee, not a maximal certificate for overlapping neighborhoods, unique cluster assignment, or a guarantee after moving training data and refitting. Immutable coordinates constrain the recommended action; the certificate covers errors in any coordinate. The implementation reports the computed margin and any floating-point shortfall from $\tau$.
+
+\subsection{Stability of a fixed explanation across parameters}
+\label{sec:fixed-stability}
+We refit the original data with $\eps'\in\{0.9\eps,\eps,1.1\eps\}$ and MinPts shifted by $-1,0,+1$ (clamped to 1 and deduplicated). The endpoint is neither inserted into the data nor recomputed: each fit tests the same proposed position. This differs from a sweep that generates a new explanation at every setting.
+
+Cluster IDs can change between fits. We therefore match clusters through original observation membership. If the original target's members occupy multiple new non-noise clusters, the target is marked split; if none remain in any cluster, it is marked disappeared. A single overlapping cluster is marked merged if it also contains members of another original non-noise cluster. Otherwise it must have Jaccard overlap $|C\cap C'|/|C\cup C'|\geq0.5$ with the original target; lower overlap is unresolved. A grid cell passes only when the identity is resolved and the fixed endpoint reaches one of the matched cluster's cores. Unresolved cases count as not passed and retain their reason. The pass fraction describes this finite grid; it is not a probability or a guarantee over all parameters.
+
 \section{Interactive Visualization}
 The ExDBSCAN Explorer connects a browser interface to the same DBSCAN and ExDBSCAN implementation used in the experiments. A Python service loads the data, fits the model and returns point roles and explanations to a MapLibre-based interface. The Explorer supports the earthquake data and the three synthetic datasets. In the data view, event locations are displayed on a map. In the cluster view (Figure~\ref{fig:explorer-cluster}), sliders change $\eps$ and MinPts, and markers distinguish core points, border points and noise. Selecting an observation, or placing an imagined point, opens its local explanation.
 
@@ -113,6 +135,8 @@ At the default settings, the model finds 20 clusters: 752 core, 59 border and 44
     \label{fig:explorer-explain}
 \end{figure}
 
+A separate local Robust Lab page (\texttt{/robust.html}) compares original and certified endpoints using native SVG. It displays movement distances, the computed error radius, and both parameter-stability grids; users can fix a coordinate, change the requested tolerance, and export the request and result as JSON. It calls the same NumPy-based core implementation and requires no external map assets.
+
 \section{Experimental Setup}
 \subsection{Datasets and parameters}
 We use three controlled two-dimensional datasets: compact blobs with noise, two moons, and concentric rings. These cases expose compact and curved clusters and allow specific point roles to be checked. The saved mock experiments use seeds 7 and 19 and dataset-specific combinations of $\eps$ and MinPts.
@@ -122,9 +146,14 @@ The real dataset is a USGS earthquake catalog snapshot \cite{usgs} covering Sout
 The saved real-data grid uses $\eps\in\{2,5,10\}$ km and MinPts $\in\{5,10,20\}$. Both real and synthetic experiments request $k\in\{1,3,5\}$ alternatives and compare greedy, nearest-core, and seeded random reference selection. For each fitted model, the experiment samples up to 12 query--target pairs. Runs are repeated with no fixed feature and with the second coordinate fixed. These repeated configurations are experimental runs, rather than independent real-world events.
 
 \subsection{Validation measures}
-Tests cover neighborhood roles, cluster expansion, graph distances, greedy selection, projection, constraints, and data preparation. Graph distances are compared with Floyd--Warshall on test cases, while generated endpoints are checked against target core neighborhoods independently of the selection procedure. The saved validation report records 52 passing unit and property tests.
+Tests cover neighborhood roles, cluster expansion, graph distances, greedy selection, projection, constraints, and data preparation. Graph distances are compared with Floyd--Warshall on test cases, while generated endpoints are checked against target core neighborhoods independently of the selection procedure. The extended validation report records 65 passing core tests, including 13 robustness tests covering projection, constraints, numerical boundaries, cluster matching, and snapshot preservation. Nine separate HTTP API tests also pass. These totals extend the original 52-test core suite; they are not additional experimental query counts.
 
 We distinguish three measures. \emph{Returned validity} is the proportion of returned alternatives that pass the endpoint check. \emph{Requested coverage} is the number of valid alternatives divided by the number requested. \emph{Complete-query rate} is the proportion of requests for which all $k$ requested alternatives are returned and valid. An empty result contributes no valid alternatives to coverage; its returned validity cannot be interpreted as evidence of a valid explanation.
+
+\subsection{Robustness comparison protocol}
+The extension uses seeds 7 and 19 for each synthetic dataset. The $(\eps,\mathrm{MinPts})$ settings are $(0.4,5)$ for blobs, $(0.22,4)$ for moons, and $(0.3,4)$ for rings. The saved USGS snapshot uses $(5000\,\mathrm{m},10)$. Four evenly spaced observation indices are selected per snapshot, each targeting its nearest non-reachable cluster by core distance. Four indices have no alternative target and are logged as skipped. The remaining 24 query--target pairs are evaluated with free movement and fixed second coordinate, giving 48 scenarios.
+
+We compare original ExDBSCAN at $k=1$, a simple \emph{inward nudge}, and the certified extension at $\tau/\eps\in\{0,0.1,0.2,0.4\}$. The nudge moves the original endpoint up to $\tau$ toward its selected core using mutable coordinates, stopping at that core's mutable coordinates; under constraints this need not produce margin $\tau$. Every endpoint receives the same 256 evenly spaced perturbations of magnitude $0.2\eps$ and the same nine parameter checks from Section~\ref{sec:fixed-stability}. Perturbation checks hold the fitted model fixed. All methods use membership tolerance $10^{-10}\max(1,\eps)$ (the current fit's radius) to avoid mistaking numerical boundary errors for improvement. Movement is divided by each scenario's $\eps$ before averaging; pass rates are averaged over paired feasible scenarios. Infeasible scenarios are retained separately. The 576 method/tolerance rows are repeated evaluations, not independent scenarios.
 
 \section{Results and Discussion}
 \subsection{Clustering and local explanations}
@@ -227,8 +256,33 @@ Two limitations of DBSCAN propagate directly into the explanations, because ExDB
     \label{fig:limits}
 \end{figure}
 
+\FloatBarrier
+\subsection{Robustness versus movement cost}
+\label{sec:robust-results}
+At $\tau=0.2\eps$, all three methods are feasible on the same 27 of 48 scenarios; the other 21 remain infeasible and are excluded from the paired rate averages, not counted as successes. Table~\ref{tab:robustness} reports these paired results. The original endpoint's 47.28\% perturbation pass rate measures vulnerability to added errors, not its unperturbed validity.
+\begin{table}[htbp]
+    \centering\small
+    \caption{Paired robustness comparison on 27 feasible scenarios at $\tau=0.2\eps$. Position errors have magnitude $0.2\eps$; parameter checks use nine nearby settings.}
+    \label{tab:robustness}
+    \begin{tabular}{lrrr}
+        \toprule
+        Method & Mean movement/$\eps$ & Position pass & Parameter pass \\
+        \midrule
+        Original & 5.0927 & 47.28\% & 66.67\% \\
+        Inward nudge & 5.2927 & 98.31\% & 99.18\% \\
+        Certified & 5.3000 & 100.00\% & 99.18\% \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The certified endpoint increases mean normalized movement by 4.07\% relative to the original, while passing every tested positional perturbation. This is consistent with its certificate, whose assumptions differ from those of parameter stability. The simple nudge already captures most empirical improvement and ties the certified method on parameter pass rate here. At $\tau=0.1\eps$, their parameter pass rates are 95.88\% and 98.35\%, respectively; at $\tau=0.4\eps$, both reach 100\% on both empirical measures in this sample. These results support a movement--robustness trade-off, not universal superiority. The extension additionally supplies an explicit certificate and minimum movement within the chosen sufficient safe region. Parameter-grid percentages remain descriptive, and no speedup is established by these experiments.
+
+The repository retains every attempt, paired summaries, skipped queries and source/data hashes. The report README links to the saved results and reproduction commands, which use NumPy and project algorithms. The existing baseline experiments and their measures are reported separately above.
+
 \section{Conclusion and Limitations}
 The project links density-based clustering to local and counterfactual views. Controlled examples explain point roles and graph-based alternatives; the USGS example illustrates the same ideas on spatial observations. The experiments show valid returned alternatives under the stated fixed-clustering check, while fixed features can make requests partially or completely infeasible.
+
+The robustness extension makes a further distinction: positional errors can be bounded mathematically for a frozen model, whereas parameter changes are assessed empirically with target-identity checks. Its paired results show improved perturbation tolerance at additional movement cost, with a simple inward nudge providing a strong baseline.
 
 Interpretation remains dependent on $\eps$, MinPts, the distance measure, and the dataset. The current implementation uses Euclidean numeric features and is intended for small-scale experiments; it does not establish large-scale performance. A target-neighborhood check and a fresh DBSCAN fit answer different questions. Future work could investigate additional datasets and feature constraints, controlled performance measurements, and a user study of the visual explanations.
 

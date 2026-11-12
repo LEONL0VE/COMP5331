@@ -1,0 +1,148 @@
+
+
+@inproceedings{ester1996,
+author = {Ester, Martin and Kriegel, Hans-Peter and Sander, J{\"o}rg and Xu, Xiaowei},
+title = {A density-based algorithm for discovering clusters in large spatial databases with noise},
+year = {1996},
+publisher = {AAAI Press},
+abstract = {Clustering algorithms are attractive for the task of class identification in spatial databases. However, the application to large spatial databases rises the following requirements for clustering algorithms: minimal requirements of domain knowledge to determine the input parameters, discovery of clusters with arbitrary shape and good efficiency on large databases. The well-known clustering algorithms offer no solution to the combination of these requirements. In this paper, we present the new clustering algorithm DBSCAN relying on a density-based notion of clusters which is designed to discover clusters of arbitrary shape. DBSCAN requires only one input parameter and supports the user in determining an appropriate value for it. We performed an experimental evaluation of the effectiveness and efficiency of DBSCAN using synthetic data and real data of the SEQUOIA 2000 benchmark. The results of our experiments demonstrate that (1) DBSCAN is significantly more effective in discovering clusters of arbitrary shape than the well-known algorithm CLAR-ANS, and that (2) DBSCAN outperforms CLARANS by a factor of more than 100 in terms of efficiency.},
+booktitle = {Proceedings of the Second International Conference on Knowledge Discovery and Data Mining},
+pages = {226--231},
+numpages = {6},
+keywords = {arbitrary shape of clusters, clustering algorithms, efficiency on large spatial databases, handling nlj4-275oise},
+location = {Portland, Oregon},
+series = {KDD'96},
+  note = {\url{https://cdn.aaai.org/KDD/1996/KDD96-037.pdf}}
+}
+
+
+@inproceedings{matthews2026,
+author = {Matthews, Pernille and Krieger, Lena and Amico, Tommaso and Zimek, Arthur and Seidl, Thomas and Assent, Ira},
+title = {{ExDBSCAN}: Explaining {DBSCAN} with Counterfactual Reasoning},
+year = {2026},
+isbn = {9798400722592},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3770855.3817692},
+doi = {10.1145/3770855.3817692},
+abstract = {Clustering is an unsupervised technique for grouping data points by similarity. While explainability methods exist for supervised machine learning, they are not directly applicable to clustering, making it challenging to understand cluster assignments. This interpretability gap is particularly evident in the popular density-based method DBSCAN, which assigns points as inliers (cluster members in dense regions) or outliers (noise points in sparse regions). DBSCAN does not provide insight into why a particular point receives its assignment or if it is robust to small changes in the data. To address the lack of explainability, we introduce ExDBSCAN, a density-aware, post-hoc explanation method. ExDBSCAN offers actionable counterfactual explanations, with theoretical guarantees for validity. It generates multiple counterfactuals using a density-connected weighted graph, adopting a physics-inspired model that repels counterfactual candidates from one another (diversity), while pulling them toward the instance to explain (proximity). Empirical evaluation on 30 tabular datasets comparing against four baselines shows that ExDBSCAN outperforms all baselines while attaining perfect validity and retrieving diverse, proximal counterfactuals.},
+booktitle = {Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2},
+pages = {3703--3714},
+numpages = {12},
+keywords = {xai, counterfactuals, explainability, clustering, dbscan},
+location = {Jeju Island, Republic of Korea},
+series = {KDD '26},
+  note = {\url{https://doi.org/10.1145/3770855.3817692}}
+}
+
+@misc{matthews2026supp,
+      title={{ExDBSCAN}: Explaining {DBSCAN} with Counterfactual Reasoning -- Additional Material}, 
+      author={Pernille Matthews and Lena Krieger and Tommaso Amico and Artur Zimek and Thomas Seidl and Ira Assent},
+      year={2026},
+      eprint={2605.30225},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.30225},
+  note = {\url{https://arxiv.org/abs/2605.30225}}
+}
+
+
+
+@inproceedings{mothilal2020,
+author = {Mothilal, Ramaravind K. and Sharma, Amit and Tan, Chenhao},
+title = {Explaining machine learning classifiers through diverse counterfactual explanations},
+year = {2020},
+isbn = {9781450369367},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3351095.3372850},
+doi = {10.1145/3351095.3372850},
+abstract = {Post-hoc explanations of machine learning models are crucial for people to understand and act on algorithmic predictions. An intriguing class of explanations is through counterfactuals, hypothetical examples that show people how to obtain a different prediction. We posit that effective counterfactual explanations should satisfy two properties: feasibility of the counterfactual actions given user context and constraints, and diversity among the counterfactuals presented. To this end, we propose a framework for generating and evaluating a diverse set of counterfactual explanations based on determinantal point processes. To evaluate the actionability of counterfactuals, we provide metrics that enable comparison of counterfactual-based methods to other local explanation methods. We further address necessary tradeoffs and point to causal implications in optimizing for counterfactuals. Our experiments on four real-world datasets show that our framework can generate a set of counterfactuals that are diverse and well approximate local decision boundaries, outperforming prior approaches to generating diverse counterfactuals. We provide an implementation of the framework at https://github.com/microsoft/DiCE.},
+booktitle = {Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency},
+pages = {607--617},
+numpages = {11},
+location = {Barcelona, Spain},
+series = {FAT* '20},
+  note = {\url{https://doi.org/10.1145/3351095.3372850}}
+}
+
+
+
+@misc{spagnol2024,
+      title={Counterfactual Explanations for Clustering Models}, 
+      author={Aurora Spagnol and Kacper Sokol and Pietro Barbiero and Marc Langheinrich and Martin Gjoreski},
+      year={2024},
+      eprint={2409.12632},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2409.12632},
+  note = {\url{https://arxiv.org/abs/2409.12632}}
+}
+
+
+
+@ARTICLE{kwon2018,
+  author={Kwon, Bum Chul and Eysenbach, Ben and Verma, Janu and Ng, Kenney and De Filippi, Christopher and Stewart, Walter F. and Perer, Adam},
+  journal={IEEE Transactions on Visualization and Computer Graphics}, 
+  title={Clustervision: Visual Supervision of Unsupervised Clustering}, 
+  year={2018},
+  volume={24},
+  number={1},
+  pages={142-151},
+  keywords={Clustering algorithms;Measurement;Visual analytics;Partitioning algorithms;Data visualization;Indexes;Unsupervised Clustering;Visual Analytics;Quality Metrics;Interactive Visual Clustering},
+  doi={10.1109/TVCG.2017.2745085},
+  note = {\url{https://doi.org/10.1109/TVCG.2017.2745085}}
+}
+
+
+@misc{usgs,
+  author = {{U.S. Geological Survey}},
+  title  = {{FDSN} Event Web Service: Earthquake Catalog},
+  year   = {2026},
+  note   = {Dataset snapshot retrieved October 25, 2026. \url{https://earthquake.usgs.gov/fdsnws/event/1/}}
+}
+
+
+
+
+@inproceedings{poyiadzi2020,
+author = {Poyiadzi, Rafael and Sokol, Kacper and Santos-Rodriguez, Raul and De Bie, Tijl and Flach, Peter},
+title = {{FACE}: Feasible and Actionable Counterfactual Explanations},
+year = {2020},
+isbn = {9781450371100},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3375627.3375850},
+doi = {10.1145/3375627.3375850},
+abstract = {Work in Counterfactual Explanations tends to focus on the principle of "the closest possible world" that identifies small changes leading to the desired outcome. In this paper we argue that while this approach might initially seem intuitively appealing it exhibits shortcomings not addressed in the current literature. First, a counterfactual example generated by the state-of-the-art systems is not necessarily representative of the underlying data distribution, and may therefore prescribe unachievable goals (e.g., an unsuccessful life insurance applicant with severe disability may be advised to do more sports). Secondly, the counterfactuals may not be based on a "feasible path" between the current state of the subject and the suggested one, making actionable recourse infeasible (e.g., low-skilled unsuccessful mortgage applicants may be told to double their salary, which may be hard without first increasing their skill level). These two shortcomings may render counterfactual explanations impractical and sometimes outright offensive. To address these two major flaws, first of all, we propose a new line of Counterfactual Explanations research aimed at providing actionable and feasible paths to transform a selected instance into one that meets a certain goal. Secondly, we propose FACE: an algorithmically sound way of uncovering these "feasible paths" based on the shortest path distances defined via density-weighted metrics. Our approach generates counterfactuals that are coherent with the underlying data distribution and supported by the "feasible paths" of change, which are achievable and can be tailored to the problem at hand.},
+booktitle = {Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society},
+pages = {344--350},
+numpages = {7},
+keywords = {black-box models, counterfactuals, explainability, interpretability},
+location = {New York, NY, USA},
+series = {AIES '20},
+  note = {\url{https://doi.org/10.1145/3375627.3375850}}
+}
+
+
+@article{schubert2017,
+author = {Schubert, Erich and Sander, J{\"o}rg and Ester, Martin and Kriegel, Hans Peter and Xu, Xiaowei},
+title = {{DBSCAN} Revisited, Revisited: Why and How You Should (Still) Use {DBSCAN}},
+year = {2017},
+issue_date = {September 2017},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {42},
+number = {3},
+issn = {0362-5915},
+url = {https://doi.org/10.1145/3068335},
+doi = {10.1145/3068335},
+abstract = {At SIGMOD 2015, an article was presented with the title “DBSCAN Revisited: Mis-Claim, Un-Fixability, and Approximation” that won the conference’s best paper award. In this technical correspondence, we want to point out some inaccuracies in the way DBSCAN was represented, and why the criticism should have been directed at the assumption about the performance of spatial index structures such as R-trees and not at an algorithm that can use such indexes. We will also discuss the relationship of DBSCAN performance and the indexability of the dataset, and discuss some heuristics for choosing appropriate DBSCAN parameters. Some indicators of bad parameters will be proposed to help guide future users of this algorithm in choosing parameters such as to obtain both meaningful results and good performance. In new experiments, we show that the new SIGMOD 2015 methods do not appear to offer practical benefits if the DBSCAN parameters are well chosen and thus they are primarily of theoretical interest. In conclusion, the original DBSCAN algorithm with effective indexes and reasonably chosen parameter values performs competitively compared to the method proposed by Gan and Tao.},
+journal = {ACM Trans. Database Syst.},
+month = jul,
+articleno = {19},
+pages = {19:1--19:21},
+numpages = {21},
+keywords = {range-search complexity, density-based clustering, DBSCAN},
+note = {\url{https://doi.org/10.1145/3068335}}
+}

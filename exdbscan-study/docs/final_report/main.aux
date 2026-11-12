@@ -1,0 +1,69 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{ester1996}
+\citation{matthews2026}
+\citation{ester1996}
+\citation{schubert2017}
+\citation{mothilal2020}
+\citation{spagnol2024}
+\citation{poyiadzi2020}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{1}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Density-based clustering}{1}{subsection.2.1}\protected@file@percent }
+\citation{matthews2026}
+\citation{kwon2018}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A five-point local example of core, border, and noise roles. The selected point is border because it is reachable from a core point, although it is not core itself.}}{2}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:local}{{1}{2}{A five-point local example of core, border, and noise roles. The selected point is border because it is reachable from a core point, although it is not core itself}{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Counterfactual explanations}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Visual analysis of clustering}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods and Implementation}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}DBSCAN}{2}{subsection.3.1}\protected@file@percent }
+\citation{matthews2026}
+\citation{matthews2026supp}
+\citation{matthews2026supp}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}ExDBSCAN reference selection}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Core-point graph, selected references, and counterfactuals in a synthetic example. Arrows show feature changes, not travel routes.}}{3}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:ex}{{2}{3}{Core-point graph, selected references, and counterfactuals in a synthetic example. Arrows show feature changes, not travel routes}{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Fixed features and infeasibility}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Effect of fixed coordinates on a synthetic query. The fixed-$y$ case is reachable; fixing $x$ makes the target neighborhood unreachable.}}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:constraints}{{3}{4}{Effect of fixed coordinates on a synthetic query. The fixed-$y$ case is reachable; fixing $x$ makes the target neighborhood unreachable}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Interactive Visualization}{4}{section.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Explorer cluster view for the USGS snapshot at $\varepsilon =5$ km and MinPts $=10$. The panel shows the parameters and point-role counts. Map data: OpenStreetMap contributors; tiles: OpenFreeMap and OpenMapTiles; relief: AWS Terrain Tiles.}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:explorer-cluster}{{4}{5}{Explorer cluster view for the USGS snapshot at $\eps =5$ km and MinPts $=10$. The panel shows the parameters and point-role counts. Map data: OpenStreetMap contributors; tiles: OpenFreeMap and OpenMapTiles; relief: AWS Terrain Tiles}{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Explorer explanation for a noise event near San Bernardino. The blue circle is the query neighborhood; the arrow connects the original point with its counterfactual. The orange region depicts target core neighborhoods. Map data and tiles are attributed as in Figure~\ref {fig:explorer-cluster}.}}{5}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:explorer-explain}{{5}{5}{Explorer explanation for a noise event near San Bernardino. The blue circle is the query neighborhood; the arrow connects the original point with its counterfactual. The orange region depicts target core neighborhoods. Map data and tiles are attributed as in Figure~\ref {fig:explorer-cluster}}{figure.caption.5}{}}
+\citation{usgs}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Setup}{6}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Datasets and parameters}{6}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Validation measures}{6}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results and Discussion}{6}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Clustering and local explanations}{6}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Counterfactual validity and coverage}{6}{subsection.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces DBSCAN results on synthetic blobs, two moons, and rings at representative parameter settings. Filled markers are core points and crosses indicate noise.}}{7}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:clusters}{{6}{7}{DBSCAN results on synthetic blobs, two moons, and rings at representative parameter settings. Filled markers are core points and crosses indicate noise}{figure.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Greedy results with the second coordinate fixed. Coverage counts valid returned points over requested points; completion counts requests with all requested points valid.}}{7}{table.caption.7}\protected@file@percent }
+\newlabel{tab:coverage}{{1}{7}{Greedy results with the second coordinate fixed. Coverage counts valid returned points over requested points; completion counts requests with all requested points valid}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Proximity and diversity comparison}{7}{subsection.6.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Two-moons comparison for unconstrained queries with $k=3$. All 96 returned alternatives per strategy passed the target-neighborhood check.}}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tab:baseline}{{2}{7}{Two-moons comparison for unconstrained queries with $k=3$. All 96 returned alternatives per strategy passed the target-neighborhood check}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Spatial example and parameter sensitivity}{8}{subsection.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces USGS snapshot: clustering overview and an enlarged target-cluster example. Coordinates are projected spatial features; the alternative positions are hypothetical.}}{8}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:real}{{7}{8}{USGS snapshot: clustering overview and an enlarged target-cluster example. Coordinates are projected spatial features; the alternative positions are hypothetical}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Requested coverage and complete-query rates for greedy explanations. The constrained runs retain partial and infeasible cases.}}{8}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:validation}{{8}{8}{Requested coverage and complete-query rates for greedy explanations. The constrained runs retain partial and infeasible cases}{figure.caption.10}{}}
+\bibstyle{unsrt}
+\bibdata{references}
+\bibcite{ester1996}{1}
+\bibcite{matthews2026}{2}
+\bibcite{schubert2017}{3}
+\bibcite{mothilal2020}{4}
+\bibcite{spagnol2024}{5}
+\bibcite{poyiadzi2020}{6}
+\bibcite{kwon2018}{7}
+\bibcite{matthews2026supp}{8}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion and Limitations}{9}{section.7}\protected@file@percent }
+\bibcite{usgs}{9}
+\gdef \@abspage@last{10}

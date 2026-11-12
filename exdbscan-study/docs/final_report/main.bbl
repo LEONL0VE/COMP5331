@@ -1,0 +1,53 @@
+\begin{thebibliography}{1}
+
+\bibitem{ester1996}
+Martin Ester, Hans-Peter Kriegel, J{\"o}rg Sander, and Xiaowei Xu.
+\newblock A density-based algorithm for discovering clusters in large spatial databases with noise.
+\newblock In {\em Proceedings of the Second International Conference on Knowledge Discovery and Data Mining}, KDD'96, pages 226--231. AAAI Press, 1996.
+\newblock \url{https://cdn.aaai.org/KDD/1996/KDD96-037.pdf}.
+
+\bibitem{matthews2026}
+Pernille Matthews, Lena Krieger, Tommaso Amico, Arthur Zimek, Thomas Seidl, and Ira Assent.
+\newblock {ExDBSCAN}: Explaining {DBSCAN} with counterfactual reasoning.
+\newblock In {\em Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2}, KDD '26, pages 3703--3714, New York, NY, USA, 2026. Association for Computing Machinery.
+\newblock \url{https://doi.org/10.1145/3770855.3817692}.
+
+\bibitem{schubert2017}
+Erich Schubert, J{\"o}rg Sander, Martin Ester, Hans~Peter Kriegel, and Xiaowei Xu.
+\newblock Dbscan revisited, revisited: Why and how you should (still) use dbscan.
+\newblock {\em ACM Trans. Database Syst.}, 42(3), July 2017.
+
+\bibitem{mothilal2020}
+Ramaravind~K. Mothilal, Amit Sharma, and Chenhao Tan.
+\newblock Explaining machine learning classifiers through diverse counterfactual explanations.
+\newblock In {\em Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency}, FAT* '20, pages 607--617, New York, NY, USA, 2020. Association for Computing Machinery.
+\newblock \url{https://doi.org/10.1145/3351095.3372850}.
+
+\bibitem{spagnol2024}
+Aurora Spagnol, Kacper Sokol, Pietro Barbiero, Marc Langheinrich, and Martin Gjoreski.
+\newblock Counterfactual explanations for clustering models, 2024.
+\newblock \url{https://arxiv.org/abs/2409.12632}.
+
+\bibitem{poyiadzi2020}
+Rafael Poyiadzi, Kacper Sokol, Raul Santos-Rodriguez, Tijl De~Bie, and Peter Flach.
+\newblock {FACE}: Feasible and actionable counterfactual explanations.
+\newblock In {\em Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society}, AIES '20, pages 344--350, New York, NY, USA, 2020. Association for Computing Machinery.
+\newblock \url{https://doi.org/10.1145/3375627.3375850}.
+
+\bibitem{kwon2018}
+Bum~Chul Kwon, Ben Eysenbach, Janu Verma, Kenney Ng, Christopher De~Filippi, Walter~F. Stewart, and Adam Perer.
+\newblock Clustervision: Visual supervision of unsupervised clustering.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics}, 24(1):142--151, 2018.
+\newblock \url{https://doi.org/10.1109/TVCG.2017.2745085}.
+
+\bibitem{matthews2026supp}
+Pernille Matthews, Lena Krieger, Tommaso Amico, Artur Zimek, Thomas Seidl, and Ira Assent.
+\newblock {ExDBSCAN}: Explaining {DBSCAN} with counterfactual reasoning -- additional material, 2026.
+\newblock \url{https://arxiv.org/abs/2605.30225}.
+
+\bibitem{usgs}
+{U.S. Geological Survey}.
+\newblock {FDSN} event web service: Earthquake catalog, 2026.
+\newblock Dataset snapshot retrieved October 25, 2026. \url{https://earthquake.usgs.gov/fdsnws/event/1/}.
+
+\end{thebibliography}

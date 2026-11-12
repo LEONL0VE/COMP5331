@@ -63,3 +63,22 @@ Tested on macOS (Darwin 25.6) with Python 3.14, NumPy 2.5 and a Chromium-based b
 ## Use of AI tools
 
 The frontend design was built with the help of Claude.
+
+## API regression tests
+
+From the repository root, run:
+
+```bash
+python3 -m unittest discover -s interactive/tests -v
+```
+
+The tests start a temporary localhost server on an available port and require
+only NumPy and the checked-in data. They cover a successful clustering request,
+invalid dataset types, malformed JSON, invalid request lengths, oversized bodies,
+unsupported transfer encoding and unknown routes. No browser or map connection
+is needed.
+
+POST requests must contain a JSON object and a single non-negative
+`Content-Length`. Bodies larger than 64 KiB return HTTP 413 before being read;
+invalid framing and invalid input return HTTP 400. Chunked requests are not
+supported. The browser client supplies the length automatically.

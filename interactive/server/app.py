@@ -21,6 +21,8 @@ sys.path.insert(0, str(SERVER_DIR.parents[1] / "exdbscan-study" / "src"))
 
 import service  # noqa: E402  (needs the group's package on sys.path)
 
+MAX_REQUEST_BYTES = 64 * 1024
+
 POST_ROUTES = {
     "/api/cluster": service.cluster,
     "/api/why": service.why,
@@ -52,8 +54,19 @@ class Handler(SimpleHTTPRequestHandler):
         route = POST_ROUTES.get(urlparse(self.path).path)
         if route is None:
             return self._send(HTTPStatus.NOT_FOUND, {"error": "Unknown endpoint"})
+        if self.headers.get("Transfer-Encoding") is not None:
+            return self._send(HTTPStatus.BAD_REQUEST, {"error": "Transfer-Encoding is not supported"})
+        lengths = self.headers.get_all("Content-Length", [])
+        if len(lengths) != 1 or not lengths[0].isascii() or not lengths[0].isdigit():
+            return self._send(HTTPStatus.BAD_REQUEST, {"error": "A non-negative Content-Length is required"})
         try:
-            body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
+            length = int(lengths[0])
+        except ValueError:
+            return self._send(HTTPStatus.BAD_REQUEST, {"error": "Invalid Content-Length"})
+        if length > MAX_REQUEST_BYTES:
+            return self._send(HTTPStatus.REQUEST_ENTITY_TOO_LARGE, {"error": "Request body is too large"})
+        try:
+            body = json.loads(self.rfile.read(length) or b"{}")
         except ValueError:
             return self._send(HTTPStatus.BAD_REQUEST, {"error": "The request body must be JSON"})
         if not isinstance(body, dict):

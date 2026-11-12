@@ -227,7 +227,10 @@ def _expansion_order(result):
 
 
 def _request(body):
-    dataset = DATASETS.get(body.get("dataset"))
+    dataset_id = body.get("dataset")
+    if not isinstance(dataset_id, str):
+        raise RequestError("dataset must be a string")
+    dataset = DATASETS.get(dataset_id)
     if dataset is None:
         raise RequestError("Unknown dataset")
     eps, min_pts = body.get("eps"), body.get("minPts")

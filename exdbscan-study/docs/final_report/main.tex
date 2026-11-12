@@ -236,6 +236,6 @@ I worked on the data and DBSCAN components of the project. I examined the synthe
 \todo{Contribution to be added.}
 
 \subsection*{Sirui Zhang}
-\todo{Contribution to be added.}
+I worked on the interactive visualization part of the project and built the ExDBSCAN Explorer. I wrote a small Python server that loads the earthquake and synthetic datasets and calls the group's DBSCAN and ExDBSCAN implementation, so the Explorer shows the same results as our experiments. I built the map interface with MapLibre and drew each event through the exact inverse of the projection used in our experiments, so that every $\eps$-neighborhood on the map is the one DBSCAN uses. In the interface, a user can change $\eps$ and MinPts, see why a point is a core point, a border point or noise, and find the smallest move that puts it into a chosen cluster, with the option of fixing one coordinate. I also added the check that moves the point and fits DBSCAN again. Because a counterfactual lies exactly on the $\eps$ boundary, floating-point rounding could leave it just outside, so the check moves the point a further $10^{-9}$ of the way inside. I wrote the Explorer's documentation and took the screenshots used in Figures~\ref{fig:explorer-cluster} and~\ref{fig:explorer-explain}.
 
 \end{document}

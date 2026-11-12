@@ -14,8 +14,9 @@ Pernille Matthews, Lena Krieger, Tommaso Amico, Arthur Zimek, Thomas Seidl, and 
 
 \bibitem{schubert2017}
 Erich Schubert, J{\"o}rg Sander, Martin Ester, Hans~Peter Kriegel, and Xiaowei Xu.
-\newblock Dbscan revisited, revisited: Why and how you should (still) use dbscan.
-\newblock {\em ACM Trans. Database Syst.}, 42(3), July 2017.
+\newblock {DBSCAN} revisited, revisited: Why and how you should (still) use {DBSCAN}.
+\newblock {\em ACM Trans. Database Syst.}, 42(3):19:1--19:21, July 2017.
+\newblock \url{https://doi.org/10.1145/3068335}.
 
 \bibitem{mothilal2020}
 Ramaravind~K. Mothilal, Amit Sharma, and Chenhao Tan.

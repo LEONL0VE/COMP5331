@@ -208,7 +208,7 @@ Jianheng Ouyang & 21197820 & Arpit Narechania & Human--computer interaction \\
 Pengjun Fang & 20944434 & Qifeng Chen & Video--audio joint generation \\
 Yifei Jia & 20934910 & Qifeng Chen & Long video generation \\
 Shangpin Peng & 21324576 & Jiaya Jia & Multimodal large language models \\
-Kam Man Wu & 20922773 & Qifeng Chen & Video--audio joint generation \\
+Wu Kam Man & 20922773 & Qifeng Chen & Video--audio joint generation \\
 Sirui Zhang & 21403231 & Yangqiu Song & Policy compliance in language-model agents \\
 \bottomrule
 \end{tabularx}
@@ -232,8 +232,9 @@ I worked on the data and DBSCAN components of the project. I examined the synthe
 \subsection*{Shangpin Peng}
 \todo{Contribution to be added.}
 
-\subsection*{Kam Man Wu}
-\todo{Contribution to be added.}
+\newpage
+\subsection*{Wu Kam Man}
+I worked on stabilizing the existing ExDBSCAN implementation by adding certified positional robustness and parameter-stability evaluation. For a requested tolerance, I implemented projection onto shrunken neighborhoods of target core points and selected the feasible endpoint with the smallest movement, while preserving immutable coordinates. I derived the certificate using the triangle inequality and documented that it applies to reachability in a fixed clustering snapshot. I also implemented a parameter-grid check that refits DBSCAN and matches clusters through membership overlap, explicitly reporting splits, merges, and disappearance. I evaluated the extension on synthetic datasets and the USGS earthquake snapshot, comparing it with the original method and a simple inward-movement baseline. I added regression tests, reproducible experiment outputs, and an interactive comparison page showing movement costs, error circles, and stability grids. I also unified numerical tolerances so floating-point boundary errors would not exaggerate the measured improvement.
 
 \subsection*{Sirui Zhang}
 I worked on the interactive visualization part of the project and built the ExDBSCAN Explorer. I wrote a small Python server that loads the earthquake and synthetic datasets and calls the group's DBSCAN and ExDBSCAN implementation, so the Explorer shows the same results as our experiments. I built the map interface with MapLibre and drew each event through the exact inverse of the projection used in our experiments, so that every $\eps$-neighborhood on the map is the one DBSCAN uses. In the interface, a user can change $\eps$ and MinPts, see why a point is a core point, a border point or noise, and find the smallest move that puts it into a chosen cluster, with the option of fixing one coordinate. I also added the check that moves the point and fits DBSCAN again. Because a counterfactual lies exactly on the $\eps$ boundary, floating-point rounding could leave it just outside, so the check moves the point a further $10^{-9}$ of the way inside. I wrote the Explorer's documentation and took the screenshots used in Figures~\ref{fig:explorer-cluster} and~\ref{fig:explorer-explain}.

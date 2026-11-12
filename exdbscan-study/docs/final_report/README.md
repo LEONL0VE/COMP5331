@@ -13,4 +13,4 @@ Compile from this directory with a standard LaTeX installation:
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-Before submission, complete the five remaining contribution statements and have each member verify their own statement and the course declaration. Each contribution must be 100--500 words.
+Before submission, complete the three remaining contribution statements and have each member verify their own statement and the course declaration. Each contribution must be 100--500 words.

@@ -1,11 +1,11 @@
 {
-  "created_at": "2026-10-25T20:44:04.110921+00:00",
+  "created_at": "2026-11-12T07:24:08.100203+00:00",
   "source_fingerprint": "a5f287279c096457100a80c50c3f53bec59da51f2d4abf07178977c9e74df769",
-  "plot_script_sha256": "3d0e8c0319fdf50731c370f57595e437482b6ec68c8846ea93eeb0a757fef183",
+  "plot_script_sha256": "0d6b15e1eb2176d55680bcbc4027c6eaeb368b12a63b2f26462fc7b1180945bc",
   "runtime": {
-    "python": "3.14.6",
-    "numpy": "2.4.6",
-    "matplotlib": "3.11.0"
+    "python": "3.13.12",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2"
   },
   "note": "Figures use actual implementation outputs. Saved examples are reproduced and independently validated. Aggregate statistics are checked against query CSVs.",
   "examples": {
@@ -745,15 +745,23 @@
     }
   },
   "figures": {
-    "01_dbscan.png": "bd9fdf890e4ef85752b5e2c82c8c91ca19bcc61324a411943bafbb4db579f92c",
-    "01_dbscan.svg": "0a48a81ab4f8201774de9150ed7b779b36fdc7d6ce2618e9b86f44e9212570e6",
-    "02_exdbscan.png": "97ba962524b77ac277ed1596e9955df9d1cdc1161e4a0a6dc29ef2e0a7c2a7f3",
-    "02_exdbscan.svg": "32029fc20befc4457856b87a30946345f9ced1542a01bf1326feef5cadb14143",
-    "03_constraints.png": "49c45a6b3f20874f7440fbaa7d0f71deda2d498229748921a7c7cc82a5f82010",
-    "03_constraints.svg": "7fec6c186a4d2ab1b1529dbab95db07d29ec85805527e1ae8a94965b0664cbfd",
-    "04_validation.png": "af7c1bfce7ae839036ef4edbf2d21aa672bedc5b374178cd09cd1b9124ebc04d",
-    "04_validation.svg": "c6d9f5361f389a0694258e68b2c20ac988e4905d862bfcb0d3fcfa9f0881c49b",
-    "05_real_data.png": "7852ed1d07bdbece5e56492d5b4775460e00c81357441a738449ea5f1e1cd5df",
-    "05_real_data.svg": "033b0183f7b7501aaf4864660235e7cf93dea7a20cddd9e24d4a2ccc9e43b71f"
+    "01_dbscan.png": "c277268920d26c247d2d3dda67582839c2f8586b872244afcfe364f16b0ad008",
+    "01_dbscan.svg": "3397b2546681509c084f87e2106281338193af5d29a7b9e1005eae2f794e2435",
+    "01a_dbscan_explanation.png": "8066bccc6a52a9d7025c770c6d47a9ea10e3256f5e919700152a9e804a9d2ac1",
+    "01a_dbscan_explanation.svg": "d11d744d32b5b9e358c5efcd53799be0eaab3739c5d23774fa0754932bcf1056",
+    "01b_parameter_sweep.png": "d64bedb22a2a8a9ded00399fae3b48ad97b23c7b65667ffc5f61b36db2c0bbd5",
+    "01b_parameter_sweep.svg": "907b8aafffd8cb747f5f41efa60062c0f6981c87f736968ac47cbfdc8dfd0c0e",
+    "01c_limitations.png": "c7d2eacb2b7468c127e0ced5d073b6cba116c5456075c69a4bd79463af0e89df",
+    "01c_limitations.svg": "9bd1952b837df3363e3d71d02a2d4fd7f6bce2b70e0bdd80c46221a4a6111e46",
+    "01d_constrained_sweep.png": "fe1801cb8c27e14823abd706757f547282e38841cdbc8d07af6e1848c462000b",
+    "01d_constrained_sweep.svg": "de6f464e275a76e8d1622dde411fca42e9f7939c1b7658d8c60179dd696d98ec",
+    "02_exdbscan.png": "1781bf0744990fda1b00e9c4d67b1df50667c1a44c46c47a47b0dbe766e04de3",
+    "02_exdbscan.svg": "cb4c0adde7af2a2e6a000414b20c488633851aa20ee47e09e584994c0f15f80e",
+    "03_constraints.png": "988d973b18d198c0de7c2fec9a8c7770e3e535f8bf97324bda7ee4dc0b86dbc8",
+    "03_constraints.svg": "262d22d017bcf51d5961f4b57d4c3241471b6dda796d102fa2da6995ca97e98e",
+    "04_validation.png": "a27dc4ae10e4043858b8d4b1baba93eb6ae0dbc94a60d60875980579db460f01",
+    "04_validation.svg": "325932eb9c5efde0f9b45f6c4117f2513c2d525004f91208f696e508c5f856d0",
+    "05_real_data.png": "b14c9f533fc4ee9574e748b57bc290d29699cda5100a19990ab3a72f5d1bd912",
+    "05_real_data.svg": "b3af1f69f201583dca8f5aa8e804c69d7995438c182f1fc94840a2ba0b6f9816"
   }
 }

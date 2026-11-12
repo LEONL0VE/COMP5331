@@ -14,6 +14,13 @@ import json
 import sys
 from pathlib import Path
 
+# Make the import below independent of module import order; scripts/ and src/ are
+# also added by plot_results, but an import sorter may reorder these lines.
+_ROOT = Path(__file__).resolve().parents[1]
+for _path in (_ROOT / 'scripts', _ROOT / 'src'):
+    if str(_path) not in sys.path:
+        sys.path.insert(0, str(_path))
+
 from _common import save_json, timestamp
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.patches import Rectangle
@@ -110,7 +117,7 @@ def heatmap(ax, values, title, color, fmt):
             v = values[a, b]
             text = "-" if not np.isfinite(v) else fmt(v)
             dark = np.isfinite(v) and v > 0.62 * vmax
-            ax.text(b, a, text, ha="center", va="center", fontsize=9, color="white" if dark else INK)
+            ax.text(b, a, text, ha="center", va="center", fontsize=10.5, color="white" if dark else INK)
     for (eps, mp), edge, _ in MARKED:
         ax.add_patch(
             Rectangle(
@@ -130,16 +137,16 @@ def sweep_figure(X, grid):
     fig, axes = plt.subplots(1, 3, figsize=(13.8, 5.4))
     heatmap(axes[0], grid["clusters"], "Clusters found", BLUE, lambda v: f"{v:.0f}")
     heatmap(axes[1], grid["noise_pct"], "Noise points (% of events)", ORANGE, lambda v: f"{v:.0f}")
-    heatmap(axes[2], grid["move_km"], "Median move for 449 reference events (km)", TEAL, lambda v: f"{v:.1f}")
+    heatmap(axes[2], grid["move_km"], "Median move to the nearest cluster (km)", TEAL, lambda v: f"{v:.1f}")
     handles = [Rectangle((0, 0), 1, 1, fill=False, edgecolor=edge, lw=2, label=label) for _, edge, label in MARKED]
     fig.legend(handles=handles, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.5, 0.075))
     fig.text(
         0.5,
         0.025,
-        f"USGS Southern California 2024, {len(X):,} events. Reference events: the 449 that are noise at epsilon=5 km, MinPts=10. "
-        "Move: ExDBSCAN, k=1, toward the nearest cluster; 0 if already clustered.",
+        f"USGS Southern California 2024, {len(X):,} events. Reference events: the 449 that are noise at epsilon=5 km, MinPts=10.\n"
+        "Move: ExDBSCAN, k=1, toward the nearest cluster; 0 if the event is no longer noise.",
         ha="center",
-        fontsize=9,
+        fontsize=11,
         color="#536478",
     )
     finish(
@@ -178,7 +185,7 @@ def limitation_figure(X, grid):
             transform=ax.transAxes,
             ha="center",
             va="top",
-            fontsize=9.5,
+            fontsize=11,
             linespacing=1.6,
         )
         evidence["varying_density"][str(eps)] = {
@@ -212,7 +219,7 @@ def limitation_figure(X, grid):
         (10, largest[eps_grid.index(10)]),
         xytext=(10.5, 4),
         textcoords="data",
-        fontsize=9,
+        fontsize=11,
         color=BLUE,
         arrowprops={"arrowstyle": "-", "color": BLUE, "lw": 0.7},
     )
@@ -221,18 +228,18 @@ def limitation_figure(X, grid):
         (20, largest[-1]),
         xytext=(10.5, 70),
         textcoords="data",
-        fontsize=9,
+        fontsize=11,
         color=BLUE,
         arrowprops={"arrowstyle": "-", "color": BLUE, "lw": 0.7},
     )
     ax.text(
         0.5,
         -0.3,
-        "No sharp break: one slow change in epsilon moves the result\nfrom many local clusters to one dominant cluster.",
+        "No sharp break: one slow change in epsilon\nturns many local clusters into one dominant cluster.",
         transform=ax.transAxes,
         ha="center",
         va="top",
-        fontsize=9.5,
+        fontsize=11,
         linespacing=1.6,
     )
     evidence["usgs_chaining"] = {"min_pts": 10, "eps_km": eps_grid, "noise_pct": noise, "largest_cluster_pct": largest}

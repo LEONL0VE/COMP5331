@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-28T14:14:23.065022+00:00",
+  "created_at": "2026-11-12T07:24:09.216161+00:00",
   "points": [
     [
       1.0,
@@ -54,13 +54,13 @@
     3
   ],
   "runtime": {
-    "python": "3.12.14",
-    "numpy": "2.3.5",
+    "python": "3.13.12",
+    "numpy": "2.5.4",
     "matplotlib": "3.11.2"
   },
-  "plot_script_sha256": "6b30137998e17408c3bf996878e34ddfe756140fa5aaac2c6861934c31187a74",
+  "plot_script_sha256": "76c4e87acb87f3840f3777786e1c55438a4bc8df40cbe77cdddf78b52975faa5",
   "figures": {
-    "01a_dbscan_explanation.png": "9a465063f4d9b1307e98b3b78ef754da2ae5cd13340d4b433ed94c739c49732b",
-    "01a_dbscan_explanation.svg": "7abe7241484972db5024b0d62b2917098a87a6f7d66cb8089447daa95d1ab71f"
+    "01a_dbscan_explanation.png": "f9bc08d19228f3aed70d277645f8e3e4c5a7f25141897a638b22228b23aed821",
+    "01a_dbscan_explanation.svg": "ec30e41f1788d49cb823fbc9f8a2127acc143e064eea0a2113d8600addb63834"
   }
 }

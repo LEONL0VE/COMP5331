@@ -52,8 +52,8 @@ def read(name):
 
 def style():
     plt.rcParams.update({
-        'font.family': 'DejaVu Sans', 'font.size': 10,
-        'axes.titlesize': 12, 'axes.labelsize': 10,
+        'font.family': 'DejaVu Sans', 'font.size': 11.5,
+        'axes.titlesize': 13.5, 'axes.labelsize': 11.5,
         'figure.titlesize': 17, 'text.color': INK,
         'axes.labelcolor': INK, 'xtick.color': INK, 'ytick.color': INK,
         'axes.spines.top': False, 'axes.spines.right': False,
@@ -65,7 +65,7 @@ def style():
 
 def finish(fig, name, title, subtitle, bottom=.19):
     fig.suptitle(title, x=.055, y=.98, ha='left', fontweight='bold')
-    fig.text(.055, .915, subtitle, ha='left', fontsize=10, color='#536478')
+    fig.text(.055, .915, subtitle, ha='left', fontsize=11.5, color='#536478')
     fig.subplots_adjust(left=.07, right=.97, bottom=bottom, top=.80, wspace=.30)
     for ext in ('png', 'svg'):
         fig.savefig(OUT / f'{name}.{ext}', dpi=180)
@@ -131,7 +131,7 @@ def clustering_figure():
         axes_xy(ax)
         ax.text(.5, -.28, f'{len(r.cluster_ids)} clusters | {counts["core"]} core | '
                 f'{counts["border"]} border | {counts["noise"]} noise',
-                transform=ax.transAxes, ha='center', fontsize=9)
+                transform=ax.transAxes, ha='center', fontsize=11)
         EVIDENCE[name] = {'seed': 7, 'eps': eps, 'min_pts': min_pts,
                           'clusters': len(r.cluster_ids), 'point_types': counts}
     fig.legend(handles=point_legend(), loc='lower center', ncol=3, frameon=False,
@@ -197,8 +197,8 @@ def method_figure():
         axes[1].scatter(*cf, s=140, marker='*', color=color, edgecolor='white', linewidth=.5, zorder=8)
         axes[1].annotate(f'CF{number}', cf, xytext=(8, 9), textcoords='offset points', color=color, fontweight='bold')
     axes[0].text(.5, -.19, f'q1 to q2: graph distance = {graph_distance:.2f}; straight-line distance = {straight_distance:.2f}',
-                 ha='center', transform=axes[0].transAxes, fontsize=9)
-    axes[1].text(.5, -.19, '3 requested / 3 returned / 3 independently valid', ha='center', transform=axes[1].transAxes, fontsize=9)
+                 ha='center', transform=axes[0].transAxes, fontsize=11)
+    axes[1].text(.5, -.19, '3 requested / 3 returned / 3 independently valid', ha='center', transform=axes[1].transAxes, fontsize=11)
     fig.legend(handles=[Line2D([], [], color=ORANGE, lw=2, label='Dijkstra shortest path'),
                         Line2D([], [], color=INK, ls=':', label='Straight-line distance'),
                         Line2D([], [], marker='s', ls='', color=BLUE, label='Reference core'),
@@ -239,7 +239,7 @@ def constraints_figure():
         else:
             text = 'No reachable target ball\nStatus: infeasible; 0 returned'
         ax.set_title(title, loc='left')
-        ax.text(.5, -.36, text, transform=ax.transAxes, ha='center', va='top', fontsize=10, linespacing=1.6)
+        ax.text(.5, -.36, text, transform=ax.transAxes, ha='center', va='top', fontsize=11.5, linespacing=1.6)
         axes_xy(ax)
         ax.set(xlim=(-.45, 4.25), ylim=(-.75, 1.9))
     fig.legend(handles=[Line2D([], [], marker='D', ls='', color=RED, label='Original query'),
@@ -276,7 +276,7 @@ def summary_figure():
         for ax, values in zip(axes, measures):
             bars = ax.bar(x + offset, values, .32, color=color, label=label)
             for bar, value in zip(bars, values):
-                ax.text(bar.get_x()+bar.get_width()/2, value+2, f'{value:.1f}%', ha='center', fontsize=9)
+                ax.text(bar.get_x()+bar.get_width()/2, value+2, f'{value:.1f}%', ha='center', fontsize=10.5)
     for ax, title, ylabel in zip(axes,
             ['Requested explanations covered', 'Queries completed in full'],
             ['Valid returned points / requested points (%)', 'Complete queries / all queries (%)']):
@@ -286,7 +286,7 @@ def summary_figure():
     fig.legend(*axes[0].get_legend_handles_labels(), loc='lower center', ncol=2,
                frameon=False, bbox_to_anchor=(.5, .055))
     fig.text(.5, .02, 'Greedy strategy only. Per condition: 288 blobs, 96 moons, 96 rings, 324 USGS queries. Failed queries retained.',
-             ha='center', fontsize=9)
+             ha='center', fontsize=11)
     EVIDENCE['greedy_summary'] = summaries
     total_valid = sum(row['valid'] for row in summaries)
     total_returned = sum(row['returned'] for row in summaries)
@@ -330,9 +330,9 @@ def real_figure():
     for ax in axes:
         axes_xy(ax, 'Local east (km)', 'Local north (km)')
     fig.text(.5, .08, 'Target cluster 0 is specified; it is not necessarily the nearest alternative cluster. Squares: reference cores; stars: counterfactuals.',
-             ha='center', fontsize=9)
+             ha='center', fontsize=11)
     fig.text(.5, .04, 'Feature-space locations in a local planar approximation; not a geographic basemap or a physical intervention on earthquakes.',
-             ha='center', fontsize=9, color='#536478')
+             ha='center', fontsize=11, color='#536478')
     finish(fig, '05_real_data', 'Real-data check: USGS Southern California, 2024',
            f'Reproduces a saved example from the {len(X):,}-event snapshot. DBSCAN eps=2,000 m, MinPts=5; ExDBSCAN k=3.', bottom=.22)
 

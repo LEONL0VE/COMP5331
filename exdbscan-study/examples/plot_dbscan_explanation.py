@@ -8,6 +8,13 @@ import hashlib
 from pathlib import Path
 import sys
 
+# Make the import below independent of module import order; scripts/ and src/ are
+# also added by plot_results, but an import sorter may reorder these lines.
+_ROOT = Path(__file__).resolve().parents[1]
+for _path in (_ROOT / 'scripts', _ROOT / 'src'):
+    if str(_path) not in sys.path:
+        sys.path.insert(0, str(_path))
+
 from plot_results import (
     OUT, ROOT, ORANGE, RED, TEAL, Circle, DBSCAN, axes_xy,
     finish, matplotlib, np, plt, point_legend, scatter_clusters, style,
@@ -42,7 +49,7 @@ def main():
     offsets = [(0, 14), (-27, 14), (0, 31), (27, 14), (0, 14)]
     for index, (point, kind) in enumerate(zip(X, result.point_types)):
         axes[0].annotate(f'{index}: {kind}', point, xytext=offsets[index],
-                         textcoords='offset points', ha='center', fontsize=9)
+                         textcoords='offset points', ha='center', fontsize=11)
 
     point = X[selected]
     axes[1].add_patch(Circle(point, model.eps, facecolor=ORANGE, edgecolor=ORANGE,
@@ -61,7 +68,7 @@ def main():
     axes[1].text(.5, -.23,
                  '2 neighbors including itself < MinPts=3, so it is not core.\n'
                  "It has core point 3 within epsilon, so it is border.",
-                 transform=axes[1].transAxes, ha='center', va='top', fontsize=9)
+                 transform=axes[1].transAxes, ha='center', va='top', fontsize=11)
     fig.legend(handles=point_legend(), loc='lower center', ncol=3, frameon=False,
                bbox_to_anchor=(.5, .015))
     finish(fig, '01a_dbscan_explanation', 'DBSCAN local explanation: core, border, and noise',

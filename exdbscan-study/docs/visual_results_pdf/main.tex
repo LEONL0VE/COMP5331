@@ -77,32 +77,37 @@ benchmark results have been reproduced.
         \bottomrule\noalign{}
         \endlastfoot
         DBSCAN neighborhood counts and core/border/noise classification & 12
-        DBSCAN tests,~\cref{fig:dbscan}, and~\cref{fig:local}                                          \\
+        DBSCAN tests,~\cref{fig:dbscan}, and~\cref{fig:local}                            \\
         Density-connected cluster expansion and non-spherical clusters  &
         Independent connected-component oracle, two moons, and concentric
         rings                                                                            \\
         Candidate core graph and Dijkstra shortest paths                & 5 graph tests,
-        Floyd-Warshall comparison, and~\cref{fig:exdbscan}                                          \\
+        Floyd-Warshall comparison, and~\cref{fig:exdbscan}                               \\
         Greedy reference selection and counterfactual projection        & 17 ExDBSCAN
-        tests, full-energy comparison, and~\cref{fig:exdbscan}                                      \\
+        tests, full-energy comparison, and~\cref{fig:exdbscan}                           \\
         Immutable-feature feasibility and exact coordinate preservation & 11
-        constraint tests and~\cref{fig:constraints}                                                    \\
+        constraint tests,~\cref{fig:constraints}, and~\cref{fig:constrained-sweep}         \\
         Partial and infeasible results without duplicate padding        & Edge-case
-        tests and coverage statistics in~\cref{fig:validation}                                        \\
+        tests and coverage statistics in~\cref{fig:validation}                           \\
         Independent endpoint verification and separate quality metrics  & Every
         returned experimental point is checked against the fixed core
         neighborhoods                                                                    \\
         Real spatial-data preparation and reproducible experiments      & 6 data
-        tests, recorded hashes, and~\cref{fig:real}                                             \\
+        tests, recorded hashes, and~\cref{fig:real}                                      \\
+        Parameter sensitivity of both the clustering and the explanations & Full
+        8 epsilon by 7 MinPts sweep of the snapshot:~\cref{fig:sweep} without
+        constraints,~\cref{fig:constrained-sweep} with one coordinate fixed               \\
+        Known DBSCAN limitations demonstrated with data                 & Varying
+        density and chaining in~\cref{fig:limits}                                        \\
         Independence from third-party clustering and graph algorithms   & 1
         dependency test blocks sklearn, scipy, and networkx imports while both
         algorithms run                                                                   \\
     \end{longtable}
 }
 
-DBSCAN, Dijkstra, greedy selection, and geometric projection are
-implemented in the project. Matplotlib is an optional rendering
-dependency only.
+DBSCAN, Dijkstra, greedy selection, and geometric projection are implemented in the project.
+
+Matplotlib is an optional rendering dependency only.
 
 \clearpage
 
@@ -154,7 +159,7 @@ the larger synthetic datasets used for parameter experiments.
 \figlabel{1B}{fig:sweep}
 
 \begin{center}
-    \includegraphics[width=\linewidth,height=100mm,keepaspectratio]{images/01b_parameter_sweep.png}
+    \includegraphics[width=\linewidth,keepaspectratio]{images/01b_parameter_sweep.png}
 \end{center}
 
 All 56 settings (8 epsilon values and 7 MinPts values) were run with our
@@ -178,7 +183,7 @@ general rule.
 \figlabel{1C}{fig:limits}
 
 \begin{center}
-    \includegraphics[width=\linewidth,height=96mm,keepaspectratio]{images/01c_limitations.png}
+    \includegraphics[width=\linewidth,keepaspectratio]{images/01c_limitations.png}
 \end{center}
 
 \textbf{Varying density.} The synthetic data (seed 7) has a dense group and a
@@ -194,11 +199,35 @@ carry over to its counterfactuals.
 
 \clearpage
 
+\subsection{Figure 1D: Sweeping Epsilon and MinPts with One Fixed Coordinate}
+\figlabel{1D}{fig:constrained-sweep}
+
+\begin{center}
+    \includegraphics[width=\linewidth,height=102mm,keepaspectratio]{images/01d_constrained_sweep.png}
+\end{center}
+
+This repeats the sweep of \cref{fig:sweep} with \texttt{north\_m} immutable, so
+events may only move east--west. The reference events are the same 449 that are
+noise at the explorer default, ExDBSCAN uses k=1, and any reachable cluster is
+an allowed target. The left panel shows the share of events that are still noise
+and can still be explained. It ranges from 2.4\% (epsilon=1~km, MinPts=30) to
+100\%. At the explorer default 205 of 449 events (45.7\%) remain explainable,
+and at the setting of \cref{fig:real} it is 134 of 401 (33.4\%).
+
+The right panel compares free and fixed movement on the same events, those that
+are explainable in both modes; cells with fewer than 20 such events are omitted.
+Fixing north never shortens a move, which the script asserts for every event. At
+the explorer default the median move for the same 205 events rises from 25.6~km
+to 49.9~km. These numbers come from one snapshot and one reference set, so they
+show a trend, not a general rule.
+
+\clearpage
+
 \subsection{Figure 2: Core Graph, Reference Selection, and Counterfactuals}
 \figlabel{2}{fig:exdbscan}
 
 \begin{center}
-    \includegraphics[width=\linewidth,height=100mm,keepaspectratio]{images/02_exdbscan.png}
+    \includegraphics[width=\linewidth,height=104mm,keepaspectratio]{images/02_exdbscan.png}
 \end{center}
 \vspace{-2em}
 
@@ -259,7 +288,7 @@ benchmark totals.
 \figlabel{4}{fig:validation}
 
 \begin{center}
-    \includegraphics[width=\linewidth,height=80mm,keepaspectratio]{images/04_validation.png}
+    \includegraphics[width=\linewidth,height=90mm,keepaspectratio]{images/04_validation.png}
 \end{center}
 \vspace{-2em}
 
@@ -299,7 +328,7 @@ statistics.
 \figlabel{5}{fig:real}
 
 \begin{center}
-    \includegraphics[width=\linewidth,height=110mm,keepaspectratio]{images/05_real_data.png}
+    \includegraphics[width=\linewidth,height=120mm,keepaspectratio]{images/05_real_data.png}
 \end{center}
 \vspace{-1em}
 

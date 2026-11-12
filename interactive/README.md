@@ -82,3 +82,22 @@ POST requests must contain a JSON object and a single non-negative
 `Content-Length`. Bodies larger than 64 KiB return HTTP 413 before being read;
 invalid framing and invalid input return HTTP 400. Chunked requests are not
 supported. The browser client supplies the length automatically.
+
+## Robust comparison lab
+
+Open `/robust.html` on the same local server. Unlike the map explorer, this page
+uses only local assets and native SVG. It compares the original endpoint with a
+certified endpoint, supports immutable coordinates, shows nearby-parameter
+stability grids and exports the request/result as JSON. Its implementation lives
+in `web/robust.html`, `web/js/robust.js` and `web/css/robust.css`.
+
+`POST /api/robust` accepts the usual `dataset`, `eps`, `minPts`, `index` (or
+`point`) and `fixed` fields, plus integer `target` and `rho` satisfying
+`0 <= rho < eps`. An infeasible geometric request returns `status: infeasible`;
+invalid input returns HTTP 400. A successful response includes the baseline,
+computed certificate and both stability grids.
+
+See [method, guarantees and experiments](../exdbscan-study/docs/robust_extension.md).
+The nine API tests also cover this endpoint and offline page assets.
+
+![Robust comparison lab](screenshots/robust.png)

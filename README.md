@@ -58,3 +58,12 @@ This project focuses on spatial clustering and counterfactual validation using e
 ---
 
 *This project is intended for research, algorithmic validation, and reproducible experimentation.*
+## Robust explanations and parameter sensitivity
+
+The [robust extension](exdbscan-study/docs/robust_extension.md) adds a positional
+certificate, immutable-coordinate support and cluster-aware parameter-grid
+checks. It includes reproducible comparisons against the original method and a
+simple inward nudge, with CSV results and an SVG figure.
+
+Run `python3 interactive/server/app.py` and open
+`http://127.0.0.1:8765/robust.html` for the self-contained comparison lab.

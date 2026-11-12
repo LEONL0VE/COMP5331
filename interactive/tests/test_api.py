@@ -71,6 +71,35 @@ class APITests(unittest.TestCase):
         status, _ = self.request(path='/api/missing')
         self.assertEqual(status, 404)
 
+    def test_robust_api_returns_certificate_and_stability(self):
+        status, datasets = self.request(method='GET', path='/api/datasets')
+        d = next(d for d in datasets if d['id'] == 'blobs')
+        body = {'dataset': d['id'], 'eps': d['eps']['default'], 'minPts': d['minPts']['default']}
+        _, clusters = self.request(json.dumps(body).encode())
+        target = clusters['clusters'][0]['id']
+        body.update(point=[10,10], target=target, rho=body['eps']*.2)
+        status, result = self.request(json.dumps(body).encode(), path='/api/robust')
+        self.assertEqual(status, 200)
+        self.assertEqual(result['status'], 'ok')
+        self.assertGreaterEqual(result['certified_radius']+1e-10, body['rho'])
+        self.assertEqual(result['stability']['total'], 9)
+        self.assertIsNotNone(result['baseline'])
+        for rho in [-1, body['eps'], True, None]:
+            body['rho'] = rho
+            status, _ = self.request(json.dumps(body).encode(), path='/api/robust')
+            self.assertEqual(status, 400)
+
+    def test_robust_page_served_without_external_assets(self):
+        connection = http.client.HTTPConnection(*self.server.server_address, timeout=3)
+        try:
+            connection.request('GET','/robust.html')
+            response = connection.getresponse(); html = response.read().decode()
+            self.assertEqual(response.status, 200)
+            self.assertIn('Parameter stability', html)
+            self.assertNotIn('src="https://', html)
+        finally:
+            connection.close()
+
     def test_valid_cluster_still_works(self):
         status, datasets = self.request(method='GET', path='/api/datasets')
         self.assertEqual(status, 200)

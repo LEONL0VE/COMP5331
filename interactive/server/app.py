@@ -24,6 +24,7 @@ import service  # noqa: E402  (needs the group's package on sys.path)
 MAX_REQUEST_BYTES = 64 * 1024
 
 POST_ROUTES = {
+    "/api/robust": service.robust,
     "/api/cluster": service.cluster,
     "/api/why": service.why,
     "/api/explain": service.explain,

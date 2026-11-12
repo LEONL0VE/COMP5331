@@ -1,0 +1,248 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seeds": [
+    7,
+    19
+  ],
+  "query_rule": "Four evenly spaced observation indices; nearest non-reachable target cluster",
+  "perturbations": "256 directions at radius 0.2 epsilon, same for every method; checks use 1e-10*max(1,eps) numerical tolerance",
+  "grid": "epsilon x [0.9,1,1.1], MinPts +/-1; refit original snapshot; unresolved identities count as failures",
+  "timing": "Diagnostic only: original explanation precomputed, therefore timings are not a method speed comparison",
+  "groups": [
+    {
+      "method": "original",
+      "rho_fraction": 0,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "method": "original",
+      "rho_fraction": 0.1,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "method": "original",
+      "rho_fraction": 0.2,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "method": "original",
+      "rho_fraction": 0.4,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "method": "nudge",
+      "rho_fraction": 0,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "method": "nudge",
+      "rho_fraction": 0.1,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.6380208333333334,
+      "stability_pass": 0.9588477366255144
+    },
+    {
+      "method": "nudge",
+      "rho_fraction": 0.2,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.9830729166666666,
+      "stability_pass": 0.9917695473251029
+    },
+    {
+      "method": "nudge",
+      "rho_fraction": 0.4,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 1.0,
+      "stability_pass": 1.0
+    },
+    {
+      "method": "certified",
+      "rho_fraction": 0,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.4722222222222222,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "method": "certified",
+      "rho_fraction": 0.1,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 0.6412037037037037,
+      "stability_pass": 0.9835390946502058
+    },
+    {
+      "method": "certified",
+      "rho_fraction": 0.2,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 1.0,
+      "stability_pass": 0.9917695473251029
+    },
+    {
+      "method": "certified",
+      "rho_fraction": 0.4,
+      "attempted": 48,
+      "feasible": 27,
+      "perturbation_pass": 1.0,
+      "stability_pass": 1.0
+    }
+  ],
+  "paired": [
+    {
+      "rho_fraction": 0,
+      "method": "original",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.092712054537361,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "rho_fraction": 0,
+      "method": "nudge",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.092712054537361,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "rho_fraction": 0,
+      "method": "certified",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.0924094330526835,
+      "perturbation_pass": 0.4722222222222222,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "rho_fraction": 0.1,
+      "method": "original",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.092712054537361,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "rho_fraction": 0.1,
+      "method": "nudge",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.192712054537361,
+      "perturbation_pass": 0.6380208333333334,
+      "stability_pass": 0.9588477366255144
+    },
+    {
+      "rho_fraction": 0.1,
+      "method": "certified",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.195914016385086,
+      "perturbation_pass": 0.6412037037037037,
+      "stability_pass": 0.9835390946502058
+    },
+    {
+      "rho_fraction": 0.2,
+      "method": "original",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.092712054537361,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "rho_fraction": 0.2,
+      "method": "nudge",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.29271205453736,
+      "perturbation_pass": 0.9830729166666666,
+      "stability_pass": 0.9917695473251029
+    },
+    {
+      "rho_fraction": 0.2,
+      "method": "certified",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.300024436768224,
+      "perturbation_pass": 1.0,
+      "stability_pass": 0.9917695473251029
+    },
+    {
+      "rho_fraction": 0.4,
+      "method": "original",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.092712054537361,
+      "perturbation_pass": 0.47280092592592593,
+      "stability_pass": 0.6666666666666669
+    },
+    {
+      "rho_fraction": 0.4,
+      "method": "nudge",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.4927120545373604,
+      "perturbation_pass": 1.0,
+      "stability_pass": 1.0
+    },
+    {
+      "rho_fraction": 0.4,
+      "method": "certified",
+      "common_cases": 27,
+      "mean_movement_over_eps": 5.513209524263481,
+      "perturbation_pass": 1.0,
+      "stability_pass": 1.0
+    }
+  ],
+  "skipped_queries": [
+    {
+      "dataset": "rings",
+      "seed": 7,
+      "index": 0,
+      "reason": "No non-reachable target cluster"
+    },
+    {
+      "dataset": "rings",
+      "seed": 7,
+      "index": 46,
+      "reason": "No non-reachable target cluster"
+    },
+    {
+      "dataset": "rings",
+      "seed": 19,
+      "index": 0,
+      "reason": "No non-reachable target cluster"
+    },
+    {
+      "dataset": "rings",
+      "seed": 19,
+      "index": 46,
+      "reason": "No non-reachable target cluster"
+    }
+  ],
+  "source_sha256": {
+    "src/density_explain/__init__.py": "b3c1e34a465f8808ed4d0148473b110630671fca02bac9715cd01c5393de33c0",
+    "src/density_explain/constraints.py": "7fa27e4cb7c33759bf543c0a46e0b85da8a5cf8d2e871c136010d9b213acebda",
+    "src/density_explain/datasets.py": "7c1951aaa5ec6d1e84e1c30a8220f3a7267bf88d2bb7518103b69b98369ab22a",
+    "src/density_explain/dbscan.py": "66749be4fd1418b4a2ab2ede5e6278457a037eec90e8eb148fb0bf9b18265a9f",
+    "src/density_explain/exdbscan.py": "8a27207b238bb2f1d6183d172bfab1dfe2f22db70c01ecd201ccd49e0ad6b643",
+    "src/density_explain/graph.py": "6f50d7c9f13468f63977ef4586f7b35c35f6458285665cc6593a7ae887d032bc",
+    "src/density_explain/metrics.py": "83c0539f94641c72634fbadeb7aa6e71ffa7c4f49512aeb44b27a6ccab78a6ab",
+    "src/density_explain/neighbors.py": "7bd5df33e8ea9e6d8cbcfbfc2426bca70c3297e89f90d3819e0cff9ed5ca0f0a",
+    "src/density_explain/robust.py": "11d25ab55f9fe5668a31f56e4341fab3925e68e2c963a0e7227b0018b36ca90e",
+    "src/density_explain/types.py": "3057b586e5eaa2f0989d9fe94bd1d9fa807797266137f43bbbde405875db3480"
+  },
+  "script_sha256": "8049ab89e5e7a9753b9364f07c9dd7d4bb047e26b209b45302fd190abf8c8d35",
+  "usgs_sha256": "42fe0d0d4802261da6fb7167642bf063262b1f9b89c4574c90f12c87352f2139"
+}

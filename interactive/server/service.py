@@ -270,3 +270,35 @@ def _vector(value, name):
     if vector.shape != (2,) or not np.isfinite(vector).all():
         raise RequestError(f"{name} must be two finite numbers")
     return vector
+
+
+def robust(body):
+    """Robust lab: compare the original method, certified endpoint and grid."""
+    from density_explain.robust import robust_explain, parameter_stability
+    dataset, eps, min_pts = _request(body)
+    index, point = _query(body, dataset)
+    fixed = _fixed(body, dataset)
+    with _lock:
+        fit = _fit(dataset, eps, min_pts)
+        p = dataset.X[index] if index is not None else point
+        try:
+            answer = robust_explain(fit.model, p, body.get('target'), body.get('rho', 0),
+                                    () if fixed is None else (fixed,))
+            original = fit.explainer.explain(point=p, target_cluster=body.get('target'), k=1,
+                                            immutable_features=() if fixed is None else (fixed,))
+        except ValueError as exc:
+            raise RequestError(str(exc)) from exc
+    baseline = None
+    if original.returned_k:
+        z = original.counterfactuals[0]
+        baseline = dict(counterfactual=z.tolist(), distance=float(np.linalg.norm(z-p)))
+    elif original.status == 'already_reachable':
+        baseline = dict(counterfactual=p.tolist(), distance=0.0)
+    answer['baseline'] = baseline
+    if answer['status'] == 'ok':
+        eps_values = [eps * f for f in (0.9, 1.0, 1.1)]
+        min_values = sorted(set([max(1, min_pts-1), min_pts, min_pts+1]))
+        answer['stability'] = parameter_stability(fit.model, answer['counterfactual'], body['target'], eps_values, min_values)
+        if baseline is not None:
+            answer['baseline_stability'] = parameter_stability(fit.model, baseline['counterfactual'], body['target'], eps_values, min_values)
+    return answer

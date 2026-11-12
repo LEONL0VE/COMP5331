@@ -18,6 +18,10 @@ from density_explain import DBSCAN, ExDBSCAN
 model = DBSCAN(1, 2).fit([[3, 0], [3.1, 0], [0, 0]])
 result = ExDBSCAN(model).explain(2, target_cluster=0, k=2)
 assert result.status == 'ok'
+from density_explain.robust import robust_explain, parameter_stability
+robust = robust_explain(model, [0, 0], 0, rho=0.2)
+assert robust['status'] == 'ok'
+assert parameter_stability(model, robust['counterfactual'], 0, [1], [2])['passed'] == 1
 '''
         root = Path(__file__).resolve().parents[1]
         environment = dict(os.environ, PYTHONPATH=str(root / 'src'))

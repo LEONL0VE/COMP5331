@@ -1,0 +1,665 @@
+{
+  "created_at": "2026-11-12T07:56:22.700718+00:00",
+  "source_fingerprint": "7313cf760096efcd94e12a7e5f4e22b810605f8b5c2fddf1ef22ff63a756c58f",
+  "config": {
+    "seeds": [
+      7,
+      19
+    ],
+    "datasets": {
+      "blobs": {
+        "eps": [
+          0.25,
+          0.4
+        ],
+        "min_pts": [
+          4,
+          6
+        ]
+      },
+      "moons": {
+        "eps": [
+          0.16,
+          0.22
+        ],
+        "min_pts": [
+          3,
+          5
+        ]
+      },
+      "rings": {
+        "eps": [
+          0.22,
+          0.3
+        ],
+        "min_pts": [
+          3,
+          5
+        ]
+      }
+    },
+    "k": [
+      1,
+      3,
+      5
+    ],
+    "strategies": [
+      "greedy",
+      "nearest",
+      "random"
+    ],
+    "max_queries_per_fit": 12,
+    "immutable_features": [
+      1
+    ]
+  },
+  "fits": [
+    {
+      "dataset": "blobs",
+      "seed": 7,
+      "n": 124,
+      "eps": 0.25,
+      "min_pts": 4,
+      "clusters": 3,
+      "core_points": 120,
+      "noise_points": 4,
+      "queries": 12,
+      "fit_seconds": 0.0008607921190559864
+    },
+    {
+      "dataset": "blobs",
+      "seed": 7,
+      "n": 124,
+      "eps": 0.25,
+      "min_pts": 6,
+      "clusters": 3,
+      "core_points": 120,
+      "noise_points": 4,
+      "queries": 12,
+      "fit_seconds": 0.0009840410202741623
+    },
+    {
+      "dataset": "blobs",
+      "seed": 7,
+      "n": 124,
+      "eps": 0.4,
+      "min_pts": 4,
+      "clusters": 3,
+      "core_points": 120,
+      "noise_points": 4,
+      "queries": 12,
+      "fit_seconds": 0.0010633328929543495
+    },
+    {
+      "dataset": "blobs",
+      "seed": 7,
+      "n": 124,
+      "eps": 0.4,
+      "min_pts": 6,
+      "clusters": 3,
+      "core_points": 120,
+      "noise_points": 4,
+      "queries": 12,
+      "fit_seconds": 0.0009690001606941223
+    },
+    {
+      "dataset": "blobs",
+      "seed": 19,
+      "n": 124,
+      "eps": 0.25,
+      "min_pts": 4,
+      "clusters": 3,
+      "core_points": 120,
+      "noise_points": 4,
+      "queries": 12,
+      "fit_seconds": 0.0008455412462353706
+    },
+    {
+      "dataset": "blobs",
+      "seed": 19,
+      "n": 124,
+      "eps": 0.25,
+      "min_pts": 6,
+      "clusters": 3,
+      "core_points": 119,
+      "noise_points": 4,
+      "queries": 12,
+      "fit_seconds": 0.0008429158478975296
+    },
+    {
+      "dataset": "blobs",
+      "seed": 19,
+      "n": 124,
+      "eps": 0.4,
+      "min_pts": 4,
+      "clusters": 3,
+      "core_points": 120,
+      "noise_points": 4,
+      "queries": 12,
+      "fit_seconds": 0.0009658331982791424
+    },
+    {
+      "dataset": "blobs",
+      "seed": 19,
+      "n": 124,
+      "eps": 0.4,
+      "min_pts": 6,
+      "clusters": 3,
+      "core_points": 120,
+      "noise_points": 4,
+      "queries": 12,
+      "fit_seconds": 0.0010850843973457813
+    },
+    {
+      "dataset": "moons",
+      "seed": 7,
+      "n": 120,
+      "eps": 0.16,
+      "min_pts": 3,
+      "clusters": 2,
+      "core_points": 120,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0005859159864485264
+    },
+    {
+      "dataset": "moons",
+      "seed": 7,
+      "n": 120,
+      "eps": 0.16,
+      "min_pts": 5,
+      "clusters": 2,
+      "core_points": 113,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0005379160866141319
+    },
+    {
+      "dataset": "moons",
+      "seed": 7,
+      "n": 120,
+      "eps": 0.22,
+      "min_pts": 3,
+      "clusters": 2,
+      "core_points": 120,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0005664168857038021
+    },
+    {
+      "dataset": "moons",
+      "seed": 7,
+      "n": 120,
+      "eps": 0.22,
+      "min_pts": 5,
+      "clusters": 2,
+      "core_points": 120,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0005749589763581753
+    },
+    {
+      "dataset": "moons",
+      "seed": 19,
+      "n": 120,
+      "eps": 0.16,
+      "min_pts": 3,
+      "clusters": 2,
+      "core_points": 120,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0005436670035123825
+    },
+    {
+      "dataset": "moons",
+      "seed": 19,
+      "n": 120,
+      "eps": 0.16,
+      "min_pts": 5,
+      "clusters": 2,
+      "core_points": 113,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0005394578911364079
+    },
+    {
+      "dataset": "moons",
+      "seed": 19,
+      "n": 120,
+      "eps": 0.22,
+      "min_pts": 3,
+      "clusters": 2,
+      "core_points": 120,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0006206249818205833
+    },
+    {
+      "dataset": "moons",
+      "seed": 19,
+      "n": 120,
+      "eps": 0.22,
+      "min_pts": 5,
+      "clusters": 2,
+      "core_points": 120,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0005691251717507839
+    },
+    {
+      "dataset": "rings",
+      "seed": 7,
+      "n": 140,
+      "eps": 0.22,
+      "min_pts": 3,
+      "clusters": 4,
+      "core_points": 134,
+      "noise_points": 0,
+      "queries": 12,
+      "fit_seconds": 0.0006511248648166656
+    },
+    {
+      "dataset": "rings",
+      "seed": 7,
+      "n": 140,
+      "eps": 0.22,
+      "min_pts": 5,
+      "clusters": 1,
+      "core_points": 70,
+      "noise_points": 70,
+      "queries": 2,
+      "fit_seconds": 0.0006719999946653843
+    },
+    {
+      "dataset": "rings",
+      "seed": 7,
+      "n": 140,
+      "eps": 0.3,
+      "min_pts": 3,
+      "clusters": 2,
+      "core_points": 140,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0006351247429847717
+    },
+    {
+      "dataset": "rings",
+      "seed": 7,
+      "n": 140,
+      "eps": 0.3,
+      "min_pts": 5,
+      "clusters": 1,
+      "core_points": 70,
+      "noise_points": 70,
+      "queries": 2,
+      "fit_seconds": 0.0006163753569126129
+    },
+    {
+      "dataset": "rings",
+      "seed": 19,
+      "n": 140,
+      "eps": 0.22,
+      "min_pts": 3,
+      "clusters": 2,
+      "core_points": 138,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0006322497501969337
+    },
+    {
+      "dataset": "rings",
+      "seed": 19,
+      "n": 140,
+      "eps": 0.22,
+      "min_pts": 5,
+      "clusters": 1,
+      "core_points": 70,
+      "noise_points": 70,
+      "queries": 2,
+      "fit_seconds": 0.000628374982625246
+    },
+    {
+      "dataset": "rings",
+      "seed": 19,
+      "n": 140,
+      "eps": 0.3,
+      "min_pts": 3,
+      "clusters": 2,
+      "core_points": 140,
+      "noise_points": 0,
+      "queries": 4,
+      "fit_seconds": 0.0006562923081219196
+    },
+    {
+      "dataset": "rings",
+      "seed": 19,
+      "n": 140,
+      "eps": 0.3,
+      "min_pts": 5,
+      "clusters": 1,
+      "core_points": 70,
+      "noise_points": 70,
+      "queries": 2,
+      "fit_seconds": 0.0006234589964151382
+    }
+  ],
+  "summaries": [
+    {
+      "dataset": "blobs",
+      "strategy": "greedy",
+      "constraint": "immutable",
+      "queries": 288,
+      "requested": 864,
+      "returned": 432,
+      "valid": 432,
+      "returned_validity": 1.0,
+      "requested_validity": 0.5,
+      "complete_queries": 144,
+      "status_counts": {
+        "ok": 144,
+        "infeasible": 144
+      },
+      "mean_query_proximity": 2.8767610511282142,
+      "total_query_seconds": 0.06172412307932973
+    },
+    {
+      "dataset": "blobs",
+      "strategy": "greedy",
+      "constraint": "unconstrained",
+      "queries": 288,
+      "requested": 864,
+      "returned": 864,
+      "valid": 864,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 288,
+      "status_counts": {
+        "ok": 288
+      },
+      "mean_query_proximity": 2.514279480661152,
+      "total_query_seconds": 0.11010657856240869
+    },
+    {
+      "dataset": "blobs",
+      "strategy": "nearest",
+      "constraint": "immutable",
+      "queries": 288,
+      "requested": 864,
+      "returned": 432,
+      "valid": 432,
+      "returned_validity": 1.0,
+      "requested_validity": 0.5,
+      "complete_queries": 144,
+      "status_counts": {
+        "ok": 144,
+        "infeasible": 144
+      },
+      "mean_query_proximity": 2.8479415123937253,
+      "total_query_seconds": 0.03767083305865526
+    },
+    {
+      "dataset": "blobs",
+      "strategy": "nearest",
+      "constraint": "unconstrained",
+      "queries": 288,
+      "requested": 864,
+      "returned": 864,
+      "valid": 864,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 288,
+      "status_counts": {
+        "ok": 288
+      },
+      "mean_query_proximity": 2.4895738170182735,
+      "total_query_seconds": 0.06967407744377851
+    },
+    {
+      "dataset": "blobs",
+      "strategy": "random",
+      "constraint": "immutable",
+      "queries": 288,
+      "requested": 864,
+      "returned": 432,
+      "valid": 432,
+      "returned_validity": 1.0,
+      "requested_validity": 0.5,
+      "complete_queries": 144,
+      "status_counts": {
+        "ok": 144,
+        "infeasible": 144
+      },
+      "mean_query_proximity": 3.079753321897197,
+      "total_query_seconds": 0.053748585283756256
+    },
+    {
+      "dataset": "blobs",
+      "strategy": "random",
+      "constraint": "unconstrained",
+      "queries": 288,
+      "requested": 864,
+      "returned": 864,
+      "valid": 864,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 288,
+      "status_counts": {
+        "ok": 288
+      },
+      "mean_query_proximity": 2.7244624019177555,
+      "total_query_seconds": 0.0786390989087522
+    },
+    {
+      "dataset": "moons",
+      "strategy": "greedy",
+      "constraint": "immutable",
+      "queries": 96,
+      "requested": 288,
+      "returned": 0,
+      "valid": 0,
+      "returned_validity": 0,
+      "requested_validity": 0.0,
+      "complete_queries": 0,
+      "status_counts": {
+        "infeasible": 96
+      },
+      "mean_query_proximity": null,
+      "total_query_seconds": 0.002009575255215168
+    },
+    {
+      "dataset": "moons",
+      "strategy": "greedy",
+      "constraint": "unconstrained",
+      "queries": 96,
+      "requested": 288,
+      "returned": 288,
+      "valid": 288,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 96,
+      "status_counts": {
+        "ok": 96
+      },
+      "mean_query_proximity": 0.9605441703269321,
+      "total_query_seconds": 0.03128896048292518
+    },
+    {
+      "dataset": "moons",
+      "strategy": "nearest",
+      "constraint": "immutable",
+      "queries": 96,
+      "requested": 288,
+      "returned": 0,
+      "valid": 0,
+      "returned_validity": 0,
+      "requested_validity": 0.0,
+      "complete_queries": 0,
+      "status_counts": {
+        "infeasible": 96
+      },
+      "mean_query_proximity": null,
+      "total_query_seconds": 0.0020130868069827557
+    },
+    {
+      "dataset": "moons",
+      "strategy": "nearest",
+      "constraint": "unconstrained",
+      "queries": 96,
+      "requested": 288,
+      "returned": 288,
+      "valid": 288,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 96,
+      "status_counts": {
+        "ok": 96
+      },
+      "mean_query_proximity": 0.8941202194407335,
+      "total_query_seconds": 0.021540206391364336
+    },
+    {
+      "dataset": "moons",
+      "strategy": "random",
+      "constraint": "immutable",
+      "queries": 96,
+      "requested": 288,
+      "returned": 0,
+      "valid": 0,
+      "returned_validity": 0,
+      "requested_validity": 0.0,
+      "complete_queries": 0,
+      "status_counts": {
+        "infeasible": 96
+      },
+      "mean_query_proximity": null,
+      "total_query_seconds": 0.0019260537810623646
+    },
+    {
+      "dataset": "moons",
+      "strategy": "random",
+      "constraint": "unconstrained",
+      "queries": 96,
+      "requested": 288,
+      "returned": 288,
+      "valid": 288,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 96,
+      "status_counts": {
+        "ok": 96
+      },
+      "mean_query_proximity": 1.4645385782218592,
+      "total_query_seconds": 0.021314920391887426
+    },
+    {
+      "dataset": "rings",
+      "strategy": "greedy",
+      "constraint": "immutable",
+      "queries": 96,
+      "requested": 288,
+      "returned": 234,
+      "valid": 234,
+      "returned_validity": 1.0,
+      "requested_validity": 0.8125,
+      "complete_queries": 76,
+      "status_counts": {
+        "ok": 76,
+        "partial": 5,
+        "infeasible": 15
+      },
+      "mean_query_proximity": 1.2619758661392095,
+      "total_query_seconds": 0.011761916801333427
+    },
+    {
+      "dataset": "rings",
+      "strategy": "greedy",
+      "constraint": "unconstrained",
+      "queries": 96,
+      "requested": 288,
+      "returned": 288,
+      "valid": 288,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 96,
+      "status_counts": {
+        "ok": 96
+      },
+      "mean_query_proximity": 1.1107968334293805,
+      "total_query_seconds": 0.02534749824553728
+    },
+    {
+      "dataset": "rings",
+      "strategy": "nearest",
+      "constraint": "immutable",
+      "queries": 96,
+      "requested": 288,
+      "returned": 234,
+      "valid": 234,
+      "returned_validity": 1.0,
+      "requested_validity": 0.8125,
+      "complete_queries": 76,
+      "status_counts": {
+        "ok": 76,
+        "partial": 5,
+        "infeasible": 15
+      },
+      "mean_query_proximity": 1.2344819653046102,
+      "total_query_seconds": 0.010530632920563221
+    },
+    {
+      "dataset": "rings",
+      "strategy": "nearest",
+      "constraint": "unconstrained",
+      "queries": 96,
+      "requested": 288,
+      "returned": 288,
+      "valid": 288,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 96,
+      "status_counts": {
+        "ok": 96
+      },
+      "mean_query_proximity": 1.0500860582523603,
+      "total_query_seconds": 0.019538464955985546
+    },
+    {
+      "dataset": "rings",
+      "strategy": "random",
+      "constraint": "immutable",
+      "queries": 96,
+      "requested": 288,
+      "returned": 234,
+      "valid": 234,
+      "returned_validity": 1.0,
+      "requested_validity": 0.8125,
+      "complete_queries": 76,
+      "status_counts": {
+        "ok": 76,
+        "partial": 5,
+        "infeasible": 15
+      },
+      "mean_query_proximity": 2.0744884395831,
+      "total_query_seconds": 0.010411331430077553
+    },
+    {
+      "dataset": "rings",
+      "strategy": "random",
+      "constraint": "unconstrained",
+      "queries": 96,
+      "requested": 288,
+      "returned": 288,
+      "valid": 288,
+      "returned_validity": 1.0,
+      "requested_validity": 1.0,
+      "complete_queries": 96,
+      "status_counts": {
+        "ok": 96
+      },
+      "mean_query_proximity": 2.254105099311049,
+      "total_query_seconds": 0.018853383138775826
+    }
+  ],
+  "all_returned_points_valid": true,
+  "note": "Timing includes cache misses and is not a controlled performance benchmark. DPP reference-graph uses reference cores; Euclidean DPP uses endpoints."
+}

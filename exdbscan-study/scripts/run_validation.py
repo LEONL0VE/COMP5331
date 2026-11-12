@@ -9,7 +9,7 @@ from _common import ROOT, save_json, source_fingerprint, timestamp
 
 
 def main():
-    phases = ['dbscan', 'graph', 'exdbscan', 'constraints', 'dependencies', 'datasets']
+    phases = ['dbscan', 'graph', 'exdbscan', 'constraints', 'dependencies', 'datasets', 'robust']
     reports = []
     transcript = io.StringIO()
     for phase in phases:
